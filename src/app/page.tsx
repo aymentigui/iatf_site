@@ -1,5 +1,3 @@
-"use client";
-
 import DivStart from "@/components/my/public/div-start";
 import NewHeader from "@/components/my/public/new-header";
 import Hero from "@/components/my/public/home/Hero";
