@@ -16,6 +16,30 @@ import { WeatherInfo } from "@/components/my/public/liens/WeatherInfo";
 export const dynamic = "force-dynamic"; // 🚀 force Next.js à ne rien mettre en cache
 export const revalidate = 0;            // 🚀 pas de revalidation ISR
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Intra-African Trade Fair 2025 | IATF 2025",
+  description:
+    "The Intra-African Trade Fair (IATF2025) is Africa’s premier trade and investment fair, connecting businesses, policy makers, and investors to boost intra-African trade and accelerate the AfCFTA.",
+  openGraph: {
+    title: "Intra-African Trade Fair 2025 | IATF 2025",
+    description:
+      "The Intra-African Trade Fair (IATF2025) is Africa’s premier trade and investment fair, connecting businesses, policy makers, and investors to boost intra-African trade and accelerate the AfCFTA.",
+    url: "https://2025.iatf.africa",
+    siteName: "IATF 2025",
+    images: [
+      {
+        url: "/iatf_image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "IATF 2025",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function Home() {
   
