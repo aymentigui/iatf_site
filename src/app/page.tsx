@@ -9,6 +9,7 @@ import IATFObjectives from "@/components/my/public/home/IATFObjectives";
 import KeySectors from "@/components/my/public/home/KeySectors";
 import Contact from "@/components/my/public/contact";
 import Secteurs from "@/components/my/public/home/secteurs";
+import Image from "next/image";
 
 export const dynamic = "force-dynamic"; // 🚀 force Next.js à ne rien mettre en cache
 export const revalidate = 0;            // 🚀 pas de revalidation ISR
@@ -42,7 +43,9 @@ export default function Home() {
       {/* Hotels & Restaurants Section */}
      <HotelsAndRestaurants ></HotelsAndRestaurants>
 
-
+      <section className="w-full p-20 h-[300px]">
+        <Image className="w-full h-full" src="/iatf_image.jpeg" alt="IATF_2025" width={600} height={600}></Image>
+      </section>
 
       {/* Contact Section */}
       <Contact />
