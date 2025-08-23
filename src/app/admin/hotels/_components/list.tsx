@@ -159,7 +159,7 @@ export function List() {
     try {
       const result = await getHotels(filters)
       if (result.status === 200) {
-        const itemsGet = JSON.parse(result.data.hotels || "[]");
+        const itemsGet = result.data.hotels || [];
         setData(itemsGet)
         setPagination({
           page: result.data.page,

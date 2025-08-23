@@ -34,13 +34,8 @@ export function List() {
   const translateSystem = useTranslations("System");
   const translateErrors = useTranslations("Error")
 
-  const router = useRouter()
   const [data, setData] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
-  const [groups, setGroups] = useState<any[]>([])
-  const [sousGroups, setSousGroups] = useState<any[]>([])
-  const [families, setFamilies] = useState<any[]>([])
-  const [sousFamilies, setSousFamilies] = useState<any[]>([])
   const { data: sheetData, setColumns, setData: setSheetData } = useImportSheetsStore();
   const [sheetNotCreated, setSheetNotCreated] = useState<any>([])
   const [sheetCreated, setSheetCreated] = useState(false)
@@ -160,7 +155,7 @@ export function List() {
     try {
       const result = await getRestos(filters)
       if (result.status === 200) {
-        const itemsGet = JSON.parse(result.data.restaurants || "[]");
+        const itemsGet = result.data.restaurants || [];
         setData(itemsGet)
         setPagination({
           page: result.data.page,
