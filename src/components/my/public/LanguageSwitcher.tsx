@@ -7,11 +7,11 @@ import { ChevronDown } from 'lucide-react';
 import Cookies from 'js-cookie';
 
 const languages = [
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'ar', name: 'العربية', flag: '🇩🇿' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'pt', name: 'Português', flag: '🇵🇹' },
   { code: 'es', name: 'Español', flag: '🇪🇸' }, 
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
 ];
 
 export default function LanguageSwitcher({ locale }: { locale: string }) {
