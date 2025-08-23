@@ -1,0 +1,835 @@
+{
+    "Index": {
+        "title": "Hola mundo"
+    },
+    "System": {
+        "title": "Sistema",
+        "createsuccess": "Creación exitosa",
+        "createfail": "Error en la creación",
+        "updatesuccess": "Actualización exitosa",
+        "updatefail": "Error en la actualización",
+        "deletesuccess": "Eliminación exitosa",
+        "deletefail": "Error en la eliminación",
+        "subscribesuccess": "Suscripción exitosa",
+        "subscribefail": "Error en la suscripción",
+        "create": "Agregar",
+        "save": "Guardar",
+        "edit": "Editar",
+        "update": "Actualizar",
+        "confirm": "Confirmar",
+        "check": "Verificar",
+        "cancel": "Cancelar",
+        "delete": "Eliminar",
+        "loading": "Cargando...",
+        "createdat": "Creado el",
+        "emailsent": "Correo enviado",
+        "login": "Iniciar sesión",
+        "verificationemailsent": "Correo de verificación enviado",
+        "resendthecode": "Reenviar el código",
+        "mustwait1minutes": "Debe esperar 1 minuto",
+        "loginsuccess": "Inicio de sesión exitoso",
+        "register": "Registrarse",
+        "registersuccess": "Registro exitoso",
+        "registerorlogin": "Regístrese o inicie sesión",
+        "dashboard": "Panel de control",
+        "settings": "Configuración",
+        "logout": "Cerrar sesión",
+        "next": "Siguiente",
+        "reset": "Restablecer",
+        "options": "Opciones",
+        "selectoption": "Seleccionar una opción",
+        "noresults": "Sin resultados",
+        "search": "Buscar",
+        "import": "Importar",
+        "import_data": "Importar datos",
+        "tabledata": "tabla de datos",
+        "back": "Atrás",
+        "pagesize": "Tamaño de página",
+        "pagesizeplaceholder": "Seleccione el tamaño de página",
+        "page": "Página",
+        "all": "Todos",
+        "of": "de",
+        "total": "Total",
+        "selected": "Seleccionados",
+        "user": "Usuario",
+        "users": "Usuarios",
+        "anonymous": "Anónimo",
+        "posting": "Publicación",
+        "image": "Imagen",
+        "video": "Video",
+        "file": "Archivo",
+        "text": "Texto",
+        "document": "Documento",
+        "audio": "Audio",
+        "other": "Otro",
+        "confermationdelete": "¿Está absolutamente seguro?",
+        "confermationdeletemessage": "Esta acción no se puede deshacer. Esto eliminará permanentemente sus datos y los eliminará de nuestros servidores.",
+        "number": "Número",
+        "date": "Fecha",
+        "time": "Hora",
+        "password": "Contraseña",
+        "select": "Selección",
+        "checkbox": "Casilla de verificación",
+        "radio": "Radio",
+        "json": "JSON",
+        "csv": "CSV",
+        "xlsx": "XLSX",
+        "pdf": "PDF",
+        "html": "HTML",
+        "html5": "HTML5",
+        "email": "Correo electrónico",
+        "phone": "Número de teléfono",
+        "url": "URL",
+        "export": "Exportar",
+        "exportall": "Exportar todo",
+        "exportselected": "Exportar selección",
+        "exportCSV": "Exportar CSV",
+        "exportXLSX": "Exportar XLSX",
+        "exportPDF": "Exportar PDF",
+        "exportHTML": "Exportar HTML",
+        "exportHTML5": "Exportar HTML5",
+        "mustrefreshtoseedata": "Por favor actualice la página para ver los nuevos datos.",
+        "downloadjustselected": "Descargar solo la selección",
+        "count": "Cantidad"
+    },
+    "Menu": {
+        "title": "Menú",
+        "home": "Inicio",
+        "settings": "Configuración",
+        "roles": "Roles",
+        "users": "Usuarios",
+        "more": "Más",
+        "testimportsheet": "Importar datos desde un archivo",
+        "files": "Archivos",
+        "files_upload": "Subir archivo",
+        "fileslocalstorage": "Archivos de almacenamiento local",
+        "pdfutil": "Utilidad PDF",
+        "blog": "Blog",
+        "logout": "Cerrar sesión",
+        "footer": "© 2025 Todos los derechos reservados"
+    },
+    "Error": {
+        "title": "Error",
+        "error": "Error",
+        "errors": "Errores",
+        "getInfo": "Error en getinfo",
+        "unauthorized": "No autorizado",
+        "forbidden": "Prohibido",
+        "usernotfound": "Usuario no encontrado",
+        "verificationtokennotfound": "No se encontró el token de verificación",
+        "invalidcode": "El código proporcionado es inválido",
+        "codeexpired": "El código proporcionado ha expirado",
+        "invalidtoken": "El token proporcionado es inválido",
+        "tokenexpired": "El token proporcionado ha expirado",
+        "badrequest": "Solicitud incorrecta",
+        "errorscreating": "Error al crear"
+    },
+    "Settings": {
+        "title": "Configuración",
+        "username": "Nombre de usuario",
+        "change username": "Cambiar nombre de usuario",
+        "personalinfo": "Información personal",
+        "change info": "Cambiar información personal",
+        "email": "Correo electrónico",
+        "emailorusername": "Correo electrónico o Nombre de usuario",
+        "change email": "Cambiar correo electrónico",
+        "password": "Contraseña",
+        "change password": "Cambiar contraseña",
+        "twofactor": "Verificación de dos factores",
+        "twofactordescription": "Si activa la verificación de dos factores, se le pedirá que proporcione un código de autenticación único cada vez que inicie sesión.",
+        "resetpassword": "Restablecer contraseña",
+        "currentpassword": "Contraseña actual",
+        "newpassword": "Nueva contraseña",
+        "confirmpassword": "Confirmar contraseña",
+        "codeverification": "Código de verificación",
+        "forgetpassword": "¿Olvidó su contraseña?",
+        "youhavenotaccount": "¿No tiene una cuenta? Haga clic aquí",
+        "youhaveaccount": "¿Ya tiene una cuenta? Haga clic aquí"
+    },
+    "Sessions": {
+        "title": "Sesiones",
+        "ip": "IP",
+        "browser": "Navegador",
+        "device": "Dispositivo",
+        "os": "Sistema operativo",
+        "lastactivity": "Última actividad",
+        "mobile": "Móvil",
+        "desktop": "Escritorio",
+        "tablet": "Tableta",
+        "tv": "TV",
+        "console": "Consola",
+        "car": "Coche",
+        "unknown": "Desconocido",
+        "activesessions": "Todas las sesiones activas",
+        "sessionid": "ID de sesión",
+        "deletesession": "Eliminar sesión",
+        "deleteallsessions": "Eliminar todas las sesiones",
+        "sessionnotfound": "Sesión no encontrada"
+    },
+    "Roles": {
+        "title": "Roles",
+        "name": "Nombre",
+        "description": "Descripción",
+        "addrole": "Agregar rol",
+        "updaterole": "Actualizar rol",
+        "deleterole": "Eliminar rol",
+        "totalusers": "Total de usuarios",
+        "searchroles": "Buscar roles",
+        "rolename": "Nombre del rol",
+        "rolenamerequired": "Por favor ingrese un nombre de rol",
+        "permissionrequired": "Debe elegir al menos un permiso"
+    },
+    "Users": {
+        "title": "Usuarios",
+        "username": "Nombre de usuario",
+        "email": "Correo electrónico",
+        "roles": "Roles",
+        "adduser": "Agregar usuario",
+        "deleteuser": "Eliminar usuario",
+        "updateuser": "Actualizar usuario",
+        "firstname": "Nombre",
+        "lastname": "Apellido",
+        "password": "Contraseña",
+        "role": "Rol",
+        "isadmin": "Admin",
+        "usernamerequired": "Por favor ingrese un nombre de usuario",
+        "username6": "El nombre de usuario debe contener al menos 6 caracteres",
+        "username20": "El nombre de usuario debe contener máximo 20 caracteres",
+        "usernameinvalid": "El nombre de usuario es inválido",
+        "emailrequired": "Por favor ingrese un correo electrónico",
+        "firstnamerequired": "Por favor ingrese un nombre",
+        "lastnamerequired": "Por favor ingrese un apellido",
+        "passwordrequired": "Por favor ingrese una contraseña",
+        "emailinvalid": "El correo electrónico es inválido",
+        "emailexists": "El correo electrónico ya existe",
+        "usernameexists": "El nombre de usuario ya existe",
+        "password6": "La contraseña debe contener al menos 6 caracteres",
+        "confirmpasswordnotmatch": "La confirmación de la contraseña no coincide",
+        "confirmpasswordrequired": "La confirmación de la contraseña es requerida",
+        "currentpasswordrequired": "La contraseña actual es requerida",
+        "newpasswordrequired": "La nueva contraseña es requerida",
+        "currentpasswordinvalid": "La contraseña actual es inválida",
+        "selectrole": "Por favor elija un rol",
+        "avatarinvalid": "El avatar es inválido",
+        "imagerequired": "La imagen es requerida",
+        "onlyimagesallowed": "Solo se permiten imágenes",
+        "selectusers": "Seleccionar usuarios",
+        "deleteusers": "Eliminar usuarios",
+        "confermationdelete": "¿Está absolutamente seguro?",
+        "confermationdeletemessage": "Esta acción no se puede deshacer. Esto eliminará permanentemente sus datos y los eliminará de nuestros servidores."
+    },
+    "Permissions": {
+        "title": "Permisos",
+        "dashboard_view": "Ver panel de control",
+        "users_view": "Ver usuarios",
+        "users_create": "Crear usuarios",
+        "users_update": "Actualizar usuarios",
+        "users_delete": "Eliminar usuarios",
+        "roles_view": "Ver roles",
+        "roles_create": "Crear roles",
+        "roles_update": "Actualizar roles",
+        "roles_delete": "Eliminar roles",
+        "files_view": "Ver archivos",
+        "files_create": "Crear archivos",
+        "files_update": "Actualizar archivos",
+        "files_delete": "Eliminar archivos"
+    },
+    "Files": {
+        "title": "Archivos",
+        "uploadfile": "Subir archivo",
+        "deletefile": "Eliminar archivo",
+        "deleteallfiles": "Eliminar todos los archivos",
+        "filename": "Nombre del archivo",
+        "filesize": "Tamaño del archivo",
+        "filetype": "Tipo de archivo",
+        "filedate": "Fecha del archivo",
+        "fileextension": "Extensión del archivo",
+        "fileurl": "URL del archivo",
+        "fileexists": "El archivo ya existe",
+        "onlyimagesallowed": "Solo se permiten imágenes",
+        "filedoesnotexist": "El archivo no existe",
+        "filesizemax": "El tamaño del archivo no debe exceder ",
+        "draganddrop": "Arrastrar y soltar archivos aquí",
+        "draganddrop1": "Arrastrar y soltar el archivo aquí",
+        "drop": "Soltar el archivo aquí...",
+        "drop1": "Soltar el archivo aquí...",
+        "selectoneormorefiles": "Seleccione uno o más archivos para subir.",
+        "selectonefile": "Seleccione un archivo para subir.",
+        "selectfilesheet": "Seleccione una hoja de datos",
+        "filespermission": "Permisos de archivos",
+        "public": "Público",
+        "allusers": "Todos los usuarios",
+        "viewpermissions": "Quién puede ver los archivos",
+        "downloadpermissions": "Quién puede descargar los archivos",
+        "deletepermissions": "Quién puede eliminar los archivos",
+        "confermationdeletemessage": "Esta acción no se puede deshacer. Esto eliminará permanentemente sus archivos y eliminará sus datos de nuestros servidores."
+    },
+    "Header": {
+        "home": "Inicio",
+        "settings": "Configuración",
+        "aboutus": "Acerca de mí",
+        "contactus": "Contáctame",
+        "logout": "Cerrar sesión",
+        "login": "Iniciar sesión",
+        "register": "Registrarse",
+        "dashboard": "Panel de control"
+    },
+    "Blogs": {
+        "title": "Blogs",
+        "addblog": "Agregar blog",
+        "updateblog": "Actualizar blog",
+        "deleteblog": "Eliminar blog",
+        "titlerequired": "Por favor ingrese un título",
+        "contentrequired": "Por favor ingrese contenido",
+        "statusrequired": "Por favor elija un estado",
+        "publish": "Publicar",
+        "draft": "Borrador",
+        "blognotfound": "Blog no encontrado"
+    },
+    "TextEditor": {
+        "placeholder": "Escriba algo..."
+    },
+    "sheet": {
+        "title": "Hoja",
+        "addsheet": "Agregar hoja",
+        "updatesheet": "Actualizar hoja",
+        "deletesheet": "Eliminar hoja",
+        "titlerequired": "Por favor ingrese un título",
+        "contentrequired": "Por favor ingrese contenido",
+        "statusrequired": "Por favor elija un estado",
+        "publish": "Publicar",
+        "draft": "Borrador",
+        "sheetnotfound": "Hoja no encontrada",
+        "required": "Este campo es obligatorio",
+        "invalidemail": "Este campo debe ser un correo electrónico",
+        "invalidphone": "Este campo debe ser un número de teléfono inválido",
+        "invalidurl": "Este campo debe ser una URL",
+        "invaliddate": "Este campo debe ser una fecha",
+        "invalidnumber": "Este campo debe ser un entero",
+        "invalidtime": "Este campo debe ser una hora",
+        "invalidpassword": "Este campo debe ser una cadena de al menos 8 caracteres",
+        "invalidtext": "Este campo debe ser una cadena de texto",
+        "invalidfile": "Este campo debe ser un archivo",
+        "invalidimage": "Este campo debe ser una imagen",
+        "invalidjson": "Este campo debe ser un JSON",
+        "invalidcsv": "Este campo debe ser un CSV",
+        "invalidxlsx": "Este campo debe ser un XLSX",
+        "invalidpdf": "Este campo debe ser un PDF",
+        "invalidhtml": "Este campo debe ser un HTML",
+        "invalidhtml5": "Este campo debe ser un HTML5"
+    },
+    "header": {
+        "title": "IATF2025 ARGEL COMIENZA EN",
+        "days": "días",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "segundos",
+        "hotels": "Hoteles",
+        "restaurants": "Restaurantes",
+        "links": "Enlaces Útiles"
+    },
+    "hero": {
+        "title": "IATF2025 ARGEL",
+        "subtitle": "Feria Comercial Intraafricana",
+        "description": "La feria comercial más grande de África regresa a Argel del 15 al 19 de abril de 2025"
+    },
+    "venue": {
+        "title": "Safex - Palacio de Exposiciones",
+        "description": "Un espacio icónico que acoge al sector privado desde 2015"
+    },
+    "bus": {
+        "title": "Estación de Autobuses",
+        "description": "Centro de transporte innovador para visitantes de IATF2025",
+        "features": {
+            "direction": "Dirección",
+            "safe": "Seguro",
+            "strategic": "Ubicación Estratégica"
+        }
+    },
+    "support": {
+        "title": "Soporte y Asistencia",
+        "subtitle": "Agentes in situ",
+        "description": "Agentes presentes en cada plataforma para guiar a los clientes",
+        "signaling": "Señalización",
+        "hours": "Horarios regulares"
+    },
+    "organization": {
+        "title": "Organización de la Estación",
+        "description": "Organizado por zonas para salidas fluidas",
+        "zones": "Distribución de Zonas"
+    },
+    "transport": {
+        "title": "Transporte de Invitados",
+        "description": "Confort, puntualidad y eficiencia",
+        "team": "Equipo de Soporte Dedicado",
+        "shuttle": "Lanzaderas Cómodas"
+    },
+    "sectors": {
+        "title": "Sectores Estratégicos",
+        "subtitle": "Descubra los sectores clave para el desarrollo económico de África",
+        "agriculture": "Agricultura",
+        "industry": "Industria",
+        "energy": "Energía",
+        "finance": "Finanzas",
+        "research": "Investigación",
+        "health": "Salud",
+        "transport_sector": "Transporte",
+        "startups": "Startups"
+    },
+    "contact": {
+        "title": "Contáctenos",
+        "subtitle": "¿Una pregunta? Contacte a nuestro equipo para cualquier información.",
+        "form": "Formulario de Contacto",
+        "links": "Enlaces Útiles",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "send": "Enviar"
+    },
+    "footer": {
+        "about": "Acerca de IATF2025",
+        "description": "La Feria Comercial Intraafricana es el evento principal para promover el comercio y la inversión en África.",
+        "contact_info": "Contacto",
+        "address": "Argel, Argelia",
+        "phone": "+213 20 17 31 88",
+        "email": "contact@iatf2025.dz",
+        "rights": "© 2025 IATF2025. Todos los derechos reservados."
+    },
+    "hotels": {
+        "title": "Hoteles",
+        "searchPlaceholder": "Buscar hoteles por nombre...",
+        "viewCard": "Vista tarjeta",
+        "viewList": "Vista lista",
+        "noResults": "No se encontraron hoteles",
+        "loadingMore": "Cargando más hoteles...",
+        "stars": "estrellas",
+        "from": "Desde",
+        "to": "Hasta",
+        "perNight": "por noche",
+        "contact": "Contacto",
+        "website": "Sitio web",
+        "services": "Servicios",
+        "address": "Dirección",
+        "location": "Ubicación",
+        "phone": "Teléfono",
+        "email": "Correo electrónico",
+        "distance": "Distancia",
+        "estimatedTime": "Tiempo estimado",
+        "zone": "Zona",
+        "dock": "Muelle",
+        "page": "Página",
+        "of": "de",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "showingResults": "Mostrando {from} a {to} de {total} hoteles",
+        "hotelDetails": "Detalles del hotel",
+        "overview": "Resumen",
+        "amenities": "Comodidades",
+        "contactInfo": "Información de contacto",
+        "locationMap": "Ubicación y mapa",
+        "priceRange": "Rango de precios",
+        "rating": "Calificación",
+        "bookNow": "Reservar ahora",
+        "callNow": "Llamar ahora",
+        "sendEmail": "Enviar correo",
+        "visitWebsite": "Visitar sitio web",
+        "getDirections": "Obtener direcciones",
+        "hotelNotFound": "Hotel no encontrado",
+        "backToHotels": "Volver a hoteles",
+        "gallery": "Galería",
+        "reviews": "Reseñas",
+        "facilities": "Instalaciones",
+        "policies": "Políticas",
+        "subtitle": "Descubra una selección de hoteles de calidad para su estancia",
+        "viewAll": "Ver todos los hoteles",
+        "noHotels": "No hay hoteles disponibles en este momento"
+    },
+    "restaurants": {
+        "title": "Restaurantes",
+        "searchPlaceholder": "Buscar restaurantes por nombre o tipo de cocina...",
+        "viewCard": "Vista tarjeta",
+        "viewList": "Vista lista",
+        "noResults": "No se encontraron restaurantes",
+        "loadingMore": "Cargando más restaurantes...",
+        "from": "Desde",
+        "to": "Hasta",
+        "contact": "Contacto",
+        "website": "Sitio web",
+        "services": "Servicios",
+        "address": "Dirección",
+        "location": "Ubicación",
+        "phone": "Teléfono",
+        "email": "Correo electrónico",
+        "distance": "Distancia",
+        "estimatedTime": "Tiempo estimado",
+        "zone": "Zona",
+        "dock": "Muelle",
+        "page": "Página",
+        "of": "de",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "showingResults": "Mostrando {from} a {to} de {total} restaurantes",
+        "restaurantDetails": "Detalles del restaurante",
+        "overview": "Resumen",
+        "amenities": "Comodidades",
+        "contactInfo": "Información de contacto",
+        "locationMap": "Ubicación y mapa",
+        "cuisineType": "Tipo de cocina",
+        "rating": "Calificación",
+        "callNow": "Llamar ahora",
+        "sendEmail": "Enviar correo",
+        "visitWebsite": "Visitar sitio web",
+        "getDirections": "Obtener direcciones",
+        "restaurantNotFound": "Restaurante no encontrado",
+        "backToRestaurants": "Volver a restaurantes",
+        "gallery": "Galería",
+        "reviews": "Reseñas",
+        "facilities": "Instalaciones",
+        "policies": "Políticas",
+        "openingHours": "Horario de apertura",
+        "priceRange": "Rango de precios",
+        "reservation": "Reserva",
+        "menu": "Menú",
+        "filters": "Filtros",
+        "sortBy": "Ordenar por",
+        "all": "Todos",
+        "openNow": "Abierto ahora",
+        "featured": "Destacados",
+        "restaurant": "restaurante",
+        "restaurants": "restaurantes",
+        "averagePrice": "Precio promedio",
+        "perPerson": "por persona",
+        "about": "Acerca de",
+        "specialties": "Especialidades",
+        "quickInfo": "Información rápida",
+        "subtitle": "Explore una variedad de restaurantes que ofrecen cocinas deliciosas",
+        "viewAll": "Ver todos los restaurantes",
+        "noRestaurants": "No hay restaurantes disponibles en este momento"
+    },
+    "officialLinks": {
+        "title": "Enlaces Oficiales MTT2025",
+        "visitSite": "Visitar Sitio Oficial",
+        "moreInfo": "Más Información",
+        "downloadApp": "Descargar App",
+        "onlineServices": "Servicios en Línea",
+        "visaInfoTitle": "Información sobre Visados",
+        "visaInfoDescr": "Información completa sobre visados de entrada a Argelia para participantes de IATF2025, con procedimientos simplificados.",
+        "visaApplication": "Solicitud de visado",
+        "websiteTitle": "Sitio Web Oficial MTT2025",
+        "websiteDescr": "Sitio web oficial de la Feria Comercial Intraafricana 2025 con toda la información sobre el evento, registro y últimas noticias."
+    },
+    "governmentLinks": {
+        "title": "Enlaces Gubernamentales",
+        "commerceInterior": {
+            "title": "Ministerio de Comercio Interior y Regulación de Mercados",
+            "description": "Regulación del mercado interior, control de precios, garantía de disponibilidad de productos esenciales. Lucha contra la especulación y el contrabando, protección de consumidores, mantenimiento del poder adquisitivo."
+        },
+        "defense": {
+            "title": "Ministerio de Defensa Nacional",
+            "description": "Responsable de la política de defensa del país, organización y gestión de las fuerzas armadas."
+        },
+        "foreignAffairs": {
+            "title": "Ministerio de Asuntos Exteriores, Comunidad Nacional en el Extranjero y Asuntos Africanos",
+            "description": "Implementación de la política exterior del país y relaciones dentro de la Unión Africana y la Unión del Magreb Árabe."
+        },
+        "interior": {
+            "title": "Ministerio del Interior y Colectividades Locales",
+            "description": "Garantizar el ejercicio de las libertades públicas conforme a la ley, promoción, animación y seguimiento del movimiento asociativo y organización de elecciones."
+        },
+        "agriculture": {
+            "title": "Ministerio de Agricultura, Desarrollo Rural y Pesca",
+            "description": "Coordinar políticas de desarrollo rural, seguir proyectos, apoyar zonas montañosas. Implementar política pesquera, promover inversiones en pesca, gestionar recursos pesqueros."
+        },
+        "commerceExterior": {
+            "title": "Ministerio de Comercio Exterior y Promoción de Exportaciones",
+            "description": "Regulación y promoción del comercio exterior argelino. Desarrollar e implementar política gubernamental sobre comercio exterior, asegurar competitividad de exportaciones para inversiones extranjeras."
+        },
+        "transport": {
+            "title": "Ministerio de Transportes",
+            "description": "Definir e implementar política nacional en transporte, cubriendo transporte terrestre (carreteras, ferrocarriles, transporte urbano), aéreo y marítimo."
+        },
+        "tourism": {
+            "title": "Ministerio de Turismo e Industria Tradicional",
+            "description": "Desarrollar, promover y regular sectores de turismo y artesanía tradicional en Argelia."
+        },
+        "culture": {
+            "title": "Ministerio de Cultura y Artes",
+            "description": "Protección y valorización del patrimonio cultural argelino."
+        },
+        "youth": {
+            "title": "Ministerio de Juventud",
+            "description": "Desarrollar e implementar políticas públicas para desarrollo, educación e integración social de jóvenes, promoción de sus derechos y participación cívica."
+        },
+        "sports": {
+            "title": "Ministerio de Deportes",
+            "description": "Definir e implementar política gubernamental en deportes, juventud y vida asociativa."
+        },
+        "health": {
+            "title": "Ministerio de Salud",
+            "description": "Implementar política gubernamental en salud pública, prevención y organización de atención sanitaria."
+        }
+    },
+    "emergencyContacts": {
+        "title": "Contactos de Emergencia",
+        "police": "Policía",
+        "fire": "Bomberos",
+        "medical": "Emergencia Médica"
+    },
+    "medicalServices": {
+        "title": "Servicios Médicos",
+        "hospitalsTitle": "Hospitales Principales",
+        "pharmaciesTitle": "Farmacias de Guardia",
+        "pharmaciesInfo": "Farmacias de guardia abiertas 24/7 para emergencias médicas.",
+        "pharmaciesHotline": "Número de información de farmacias de guardia",
+        "hospitals": [
+            {
+                "name": "CHU Mustapha Bacha",
+                "phone": "+21321234567"
+            },
+            {
+                "name": "CHU Maillot",
+                "phone": "+21321234568"
+            },
+            {
+                "name": "Hospital Birtraria",
+                "phone": "+21321234569"
+            },
+            {
+                "name": "Hospital El Kettar",
+                "phone": "+21321234570"
+            },
+            {
+                "name": "CHU Beni Messous",
+                "phone": "+21321234571"
+            },
+            {
+                "name": "Hospital Salim Zemirli",
+                "phone": "+21321234572"
+            },
+            {
+                "name": "CHU Nefissa Hamoud (Ex Parnet)",
+                "phone": "+21321234573"
+            },
+            {
+                "name": "EPH Bachir Mentouri Kouba",
+                "phone": "+21321234574"
+            }
+        ],
+        "pharmacies": [
+            {
+                "name": "Farmacia Central - Gran Oficina de Correos",
+                "phone": "+21321234600"
+            },
+            {
+                "name": "Farmacia El Hamma - Jardín de Ensayos",
+                "phone": "+21321234601"
+            },
+            {
+                "name": "Farmacia Sid Ahmed Ouabdessalam, Hydra",
+                "phone": "+21321234602"
+            },
+            {
+                "name": "Farmacia Khaldoun de Guardia, El Harrach",
+                "phone": "+21321234603"
+            },
+            {
+                "name": "Farmacia Kherif, Hussein Dey",
+                "phone": "+21321234604"
+            }
+        ]
+    },
+    "bankingServices": {
+        "title": "Servicios Bancarios",
+        "publicBanks": "Bancos Principales",
+        "atms": "Cajeros Automáticos",
+        "exchange": "Cambio de Divisas",
+        "banks": [
+            {
+                "name": "Banco de Argelia (BDA)",
+                "hours": "Horario: 8:30-15:30",
+                "closed": "Cerrado: Viernes y Sábado"
+            },
+            {
+                "name": "Crédito Popular de Argelia (CPA)",
+                "hours": "Horario: 8:30-15:30",
+                "closed": "Cerrado: Viernes y Sábado"
+            },
+            {
+                "name": "Banco Exterior de Argelia (BEA)",
+                "hours": "Horario: 8:30-15:30",
+                "closed": "Cerrado: Viernes y Sábado"
+            },
+            {
+                "name": "Société Générale Argelia",
+                "hours": "Horario: 8:30-15:30",
+                "closed": "Cerrado: Viernes y Sábado"
+            }
+        ],
+        "atmsInfo": "Cajeros automáticos disponibles 24/7 en zonas principales.",
+        "atmsLocations": [
+            "Aeropuerto Houari Boumediene",
+            "Centro Comercial Bab Ezzouar",
+            "Gran Oficina de Correos de Argel",
+            "Hoteles Principales"
+        ],
+        "atmsNote": "Se aceptan Visa y Mastercard",
+        "exchangeInfo": "Oficinas de cambio oficiales para convertir sus divisas.",
+        "exchangePlaces": [
+            "Bancos (tipo oficial)",
+            "Aeropuerto (24/7)",
+            "Hoteles (servicio al cliente)",
+            "Oficinas de cambio autorizadas"
+        ],
+        "exchangeCurrency": "Divisa: Dinar Argelino (DZD)",
+        "exchangeRate": "Tipo: Variable diariamente"
+    },
+    "communication": {
+        "title": "Comunicación",
+        "telecom": "Operadores Telefónicos",
+        "post": "Servicios Postales",
+        "operators": [
+            {
+                "name": "Mobilis",
+                "desc": "Operador principal"
+            },
+            {
+                "name": "Djezzy",
+                "desc": "Amplia cobertura"
+            },
+            {
+                "name": "Ooredoo",
+                "desc": "Internet rápido"
+            },
+            {
+                "name": "WiFi Público",
+                "desc": "Hoteles, cafés"
+            }
+        ],
+        "poste": {
+            "title": "Argelia Poste",
+            "desc": "Servicio postal nacional con oficinas en toda la ciudad.",
+            "offices": [
+                "Gran Oficina de Correos de Argel (centro)",
+                "Oficina de Correos de Hydra",
+                "Oficina de Correos de El Hamma",
+                "Servicios express disponibles"
+            ],
+            "hours": "HORARIO: 8h-17h (Dom - Jue)",
+            "closed": "Cerrado: Viernes y Sábado"
+        }
+    },
+    "partners": {
+        "title": "Nuestros Socios"
+    },
+    "weather": {
+        "title": "Información Meteorológica",
+        "checkWeather": "Consultar clima y temperatura",
+        "sunny": "Soleado",
+        "cloudy": "Nublado",
+        "rainy": "Lluvioso",
+        "hot": "Caluroso"
+    },
+    "IATF2025": {
+        "title": "Objetivos de IATF2025",
+        "subtitle": "Promover los objetivos del comercio intraafricano",
+        "objectives": [
+            "Reunir actores continentales y globales para explorar oportunidades comerciales y de inversión en África.",
+            "Servir como mercado donde compradores y vendedores se encuentren y exploren oportunidades de negocio.",
+            "Proporcionar plataforma para intercambios B2B y B2G y desarrollo de oportunidades comerciales.",
+            "Compartir información sobre comercio, inversión y mercado e identificar soluciones para desafíos que afectan el comercio intraafricano.",
+            "Compartir información sobre intervenciones de financiación y facilitación comercial proporcionadas por Afreximbank y otras instituciones financieras similares.",
+            "Ofrecer plataforma ampliada que conecte amplia gama de actividades comercializables y facilitación comercial, incluyendo industria creativa, automotriz, seminarios, talleres, etc."
+        ]
+    },
+    "KeySectors": {
+        "title": "Sectores Clave y Grupos en la IATF2025",
+        "subtitle": "Descubra las industrias en las que se centrará la IATF2025:",
+        "sectors": [
+            "Agricultura y Agroalimentación",
+            "Automotriz",
+            "Vestimenta y Textiles",
+            "Construcción e Infraestructuras",
+            "Bienes de Consumo",
+            "Industrias Creativas y Entretenimiento",
+            "Diáspora",
+            "Educación",
+            "Energía y Electricidad",
+            "Ingeniería",
+            "Finanzas",
+            "Salud y Farmacéutica",
+            "TIC (Tecnologías de la Información y la Comunicación)",
+            "Investigación, Innovación y Desarrollo",
+            "Logística",
+            "Industria Manufacturera",
+            "Minería y Valorización de Minerales",
+            "Normas e Infraestructuras de Calidad",
+            "Aviación y Turismo",
+            "Transporte (Carretera, Ferroviario, Marítimo, Aéreo)"
+        ],
+        "youthStartups": "Start-ups Juveniles"
+    },
+    "services": {
+        "support": {
+            "title": "Soporte y Asistencia",
+            "subtitle": "Servicios de ayuda disponibles las 24 horas",
+            "agents": {
+                "title": "Agentes en el lugar",
+                "description": "Agentes presentes en cada plataforma para guiar a los invitados",
+                "action": "Contactar a un agente"
+            },
+            "signage": {
+                "title": "Señalización",
+                "description": "La señalización facilita el acceso a los autobuses lanzadera",
+                "action": "Ver la señalización"
+            },
+            "schedule": {
+                "title": "Horarios regulares",
+                "description": "Los horarios de salida regulares se muestran para cada zona",
+                "action": "Consultar horarios"
+            }
+        },
+        "station": {
+            "title": "Organización de la Estación",
+            "subtitle": "Organizado por zonas para salidas fluidas",
+            "zonesTitle": "Distribución de Zonas",
+            "zonesDescription": "La estación está dividida en cuatro zonas geográficas:",
+            "platform": "Andén",
+            "activeZone": "Zona activa - Plataformas dedicadas y supervisadas",
+            "note": "Cada zona dispone de plataformas dedicadas, claramente identificadas y supervisadas por nuestro equipo de soporte.",
+            "zones": {
+                "est": {
+                    "name": "Zona Este",
+                    "description": "Hoteles situados al este de Argel (Andén 1 - 32)"
+                },
+                "ouest": {
+                    "name": "Zona Oeste",
+                    "description": "Hoteles situados al oeste de Argel (Andén 33 - 64)"
+                },
+                "centrale": {
+                    "name": "Zona Central",
+                    "description": "Hoteles en el centro de Argel (Andén 65 - 96)"
+                },
+                "h": {
+                    "name": "Zona H",
+                    "description": "Hoteles en las wilayas de Blida, Boumerdès y Tipaza (Andén 97 - 128)"
+                }
+            }
+        },
+        "transport": {
+            "title": "Transporte de Invitados",
+            "subtitle": "Servicio de autobuses lanzadera premium para todos sus desplazamientos",
+            "punctuality": {
+                "title": "Puntualidad",
+                "description": "Salidas regulares cada 15 minutos"
+            },
+            "coverage": {
+                "title": "Cobertura",
+                "description": "Servicio completo de la región de Argel"
+            },
+            "comfort": {
+                "title": "Comodidad",
+                "description": "Vehículos modernos y climatizados"
+            }
+        }
+    }
+}
