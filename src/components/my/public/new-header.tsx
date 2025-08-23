@@ -1,14 +1,13 @@
 "use client"
 import React, { useState } from 'react'
 import { useParams } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { Building2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/my/public/LanguageSwitcher';
 import CountdownTimer from './CountdownTimer';
 import { Menu, X } from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const NewHeader = () => {
     const t = useTranslations();
@@ -18,7 +17,7 @@ const NewHeader = () => {
     const targetDate = new Date('2025-09-04T00:00:00Z');
 
     return (
-        (<motion.header
+        <motion.header
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-6"
@@ -27,8 +26,15 @@ const NewHeader = () => {
                 <div className="flex justify-between items-center mb-6">
                     <Link href="/">
                         <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                                <Building2 className="w-6 h-6" />
+                            {/* Logo */}
+                            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white/20">
+                                <Image
+                                    src="/logo-transtev.png"
+                                    alt="IATF2025 Logo"
+                                    width={48}
+                                    height={48}
+                                    className="object-contain"
+                                />
                             </div>
                             <div>
                                 <h1 className="text-xl font-bold">IATF2025</h1>
@@ -37,7 +43,7 @@ const NewHeader = () => {
                         </div>
                     </Link>
 
-                    {/* Menu desktop - visible sur les grands écrans */}
+                    {/* Menu desktop */}
                     <nav className="hidden md:flex items-center space-x-6 mr-4">
                         <a href="/" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.home')}
@@ -45,18 +51,11 @@ const NewHeader = () => {
                         <a href="/hotels" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.hotels')}
                         </a>
-                        {/* <a href="/restaurants" className="hover:text-blue-300 mx-2 transition-colors">
-                            {t('header.restaurants')}
-                        </a> */}
-                        {/* <a href="/liens" className="hover:text-blue-300 mx-2 transition-colors">
-                            {t('header.links')}
-                        </a> */}
                     </nav>
 
                     <div className="flex items-center gap-4">
                         <LanguageSwitcher locale={locale} />
-
-                        {/* Bouton menu mobile - visible sur petits écrans */}
+                        {/* Bouton menu mobile */}
                         <button
                             className="md:hidden p-2 rounded-md hover:bg-blue-700 transition-colors"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -83,7 +82,7 @@ const NewHeader = () => {
                 </div>
             </div>
 
-            {/* Menu mobile - s'affiche depuis le côté */}
+            {/* Menu mobile */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
@@ -120,20 +119,6 @@ const NewHeader = () => {
                                 >
                                     {t('header.hotels')}
                                 </a>
-                                {/* <a
-                                    href="/restaurants"
-                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    {t('header.restaurants')}
-                                </a> */}
-                                {/* <a
-                                    href="/liens"
-                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    {t('header.links')}
-                                </a> */}
                             </nav>
 
                             <div className="mt-auto pt-6 border-t border-blue-700">
@@ -144,7 +129,7 @@ const NewHeader = () => {
                 )}
             </AnimatePresence>
 
-            {/* Overlay pour le menu mobile */}
+            {/* Overlay */}
             {isMobileMenuOpen && (
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -154,8 +139,8 @@ const NewHeader = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                 />
             )}
-        </motion.header>)
+        </motion.header>
     )
 }
 
-export default NewHeader
+export default NewHeader;
