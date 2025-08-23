@@ -295,3 +295,15 @@ model hotels {
   date_creation      DateTime? @default(now()) @db.Timestamp(6)
   date_modification  DateTime? @updatedAt @db.Timestamp(6)
 }
+
+
+model contact{
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  subject     String
+  message     String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  is_read     Boolean  @default(false)
+}
