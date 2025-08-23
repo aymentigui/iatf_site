@@ -15,7 +15,7 @@ import {
 export function ModeToggle() {
   const { setTheme } = useTheme()
 
-  const handleThemeChange = (theme: string) => {
+  const handleThemeChange = (theme: string):any => {
     setTheme(theme)
     localStorage.setItem("theme", theme)
     window.location.reload()
