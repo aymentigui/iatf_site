@@ -301,8 +301,10 @@ model contact{
   id          String   @id @default(cuid())
   name        String
   email       String
+  phone       String?
   subject     String
   message     String
+  viewed      Boolean  @default(false)
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
   is_read     Boolean  @default(false)

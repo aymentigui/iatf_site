@@ -43,6 +43,13 @@ const itemsMenu = async () =>{
             permissions: [""],
         },
         {
+            title: "messages",
+            url: "/admin/messages",
+            icon: UserRoundCog,
+            admin: false,
+            permissions: [""],
+        },
+        {
             title: Menu("files"),
             url: "/admin/files",
             icon: File,
