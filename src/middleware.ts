@@ -9,7 +9,7 @@ export default auth(async (req) => {
   const isLogging = !!req.auth; // Vérifie si l'utilisateur est connecté
 
   let lang = cookies.get('lang')?.value || 'en';
-  const supportedLanguages = ['en', 'fr', 'ar'];
+  const supportedLanguages = ['en', 'fr', 'ar', "pt", 'es']; // Langues supportées
   if (!supportedLanguages.includes(lang)) {
     lang = 'en'; // Langue par défaut si non valide
   }

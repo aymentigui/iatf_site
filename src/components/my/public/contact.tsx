@@ -186,7 +186,8 @@ const Contact = () => {
                                 if (contactId) {
                                     const res = await verifyOtp(contactId, code)
                                     if (res.status === 200) {
-                                        alert("Vérifié ✅")
+                                        alert("Verified ✅")
+                                        setFormData({ name: '', email: '', phone: "", subject: "", message: '' }) // Réinitialiser le formulaire
                                         setShowDialog(false)
                                     } else {
                                         alert(res.message)

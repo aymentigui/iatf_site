@@ -15,6 +15,9 @@ export async function getContactMessages(): Promise<{ status: number; data: any 
 
     const [messages, total] = await Promise.all([
       prisma.contact.findMany({
+        where:{
+          verified: true,
+        }
       }),
       prisma.restaurant.count(),
     ])
