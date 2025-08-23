@@ -8,10 +8,6 @@ export async function getHotels(filters?: any): Promise<{ status: number; data: 
   const e = await getTranslations("Error")
 
   try {
-    const session = await verifySession()
-    if (!session?.data?.user) {
-      return { status: 401, data: { message: e("unauthorized") } }
-    }
 
     const { search, statut, page, limit } = filters
 

@@ -38,7 +38,7 @@ export default function Hotels() {
                     limit: 25,
                 });
                 if (result.status !== 200) {
-                    console.error("Failed to fetch hotels:", result.data.message);
+                    console.error("Failed to fetch hotels:", result);
                     return;
                 }
                 setHotels(result.data.hotels || []);
