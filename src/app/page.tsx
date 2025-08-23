@@ -43,8 +43,8 @@ export default function Home() {
       {/* Hotels & Restaurants Section */}
      <HotelsAndRestaurants ></HotelsAndRestaurants>
 
-      <section className="w-full p-20 h-[300px]">
-        <Image className="w-full h-full" src="/iatf_image.jpeg" alt="IATF_2025" width={600} height={600}></Image>
+      <section className="w-full p-20 h-[550px]">
+        <Image className="w-full h-full object-contain" src="/iatf_image.jpeg" alt="IATF_2025" width={600} height={600}></Image>
       </section>
 
       {/* Contact Section */}
