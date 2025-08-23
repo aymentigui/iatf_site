@@ -14,11 +14,8 @@ const NewHeader = () => {
     const t = useTranslations();
     const params = useParams();
     const locale = params.locale as string;
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [activeZone, setActiveZone] = useState<string | null>(null)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const targetDate = new Date('2025-09-04T00:00:00Z');
-
 
     return (
         (<motion.header
