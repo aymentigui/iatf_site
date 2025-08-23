@@ -479,27 +479,27 @@ class App {
         const defaultItems = [
             {
                 "image": "https://flagcdn.com/w320/dz.png",
-                "text": "Algeria - Pays hôte de l'IATF 2025"
+                "text": "Algeria - Host country of IATF 2025"
             },
             {
                 "image": "https://flagcdn.com/w320/za.png",
-                "text": "South Africa - Afrique du Sud"
+                "text": "South Africa"
             },
             {
                 "image": "https://flagcdn.com/w320/ng.png",
-                "text": "Nigeria - Plus grande économie d'Afrique"
+                "text": "Nigeria - Africa's largest economy"
             },
             {
                 "image": "https://flagcdn.com/w320/eg.png",
-                "text": "Egypt - Égypte"
+                "text": "Egypt"
             },
             {
                 "image": "https://flagcdn.com/w320/ke.png",
-                "text": "Kenya - Hub économique de l'Afrique de l'Est"
+                "text": "Kenya - East Africa's economic hub"
             },
             {
                 "image": "https://flagcdn.com/w320/eh.png",
-                "text": "الصحراء الغربية - Western Sahara"
+                "text": "Western Sahara"
             },
             {
                 "image": "https://flagcdn.com/w320/gh.png",
@@ -507,193 +507,194 @@ class App {
             },
             {
                 "image": "https://flagcdn.com/w320/ma.png",
-                "text": "Morocco - Maroc"
+                "text": "Morocco"
             },
             {
                 "image": "https://flagcdn.com/w320/et.png",
-                "text": "Ethiopia - Éthiopie"
+                "text": "Ethiopia"
             },
             {
                 "image": "https://flagcdn.com/w320/tn.png",
-                "text": "Tunisia - Tunisie"
+                "text": "Tunisia"
             },
             {
                 "image": "https://flagcdn.com/w320/ug.png",
-                "text": "Uganda - Ouganda"
+                "text": "Uganda"
             },
             {
                 "image": "https://flagcdn.com/w320/tz.png",
-                "text": "Tanzania - Tanzanie"
+                "text": "Tanzania"
             },
             {
                 "image": "https://flagcdn.com/w320/rw.png",
-                "text": "Rwanda - Hub d'affaires en Afrique de l'Est"
+                "text": "Rwanda - East Africa's business hub"
             },
             {
                 "image": "https://flagcdn.com/w320/sn.png",
-                "text": "Senegal - Sénégal"
+                "text": "Senegal"
             },
             {
                 "image": "https://flagcdn.com/w320/ci.png",
-                "text": "Côte d'Ivoire - Ivory Coast"
+                "text": "Ivory Coast"
             },
             {
                 "image": "https://flagcdn.com/w320/cm.png",
-                "text": "Cameroon - Cameroun"
+                "text": "Cameroon"
             },
             {
                 "image": "https://flagcdn.com/w320/zm.png",
-                "text": "Zambia - Zambie"
+                "text": "Zambia"
             },
             {
                 "image": "https://flagcdn.com/w320/zw.png",
-                "text": "Zimbabwe - Zimbabwé"
+                "text": "Zimbabwe"
             },
             {
                 "image": "https://flagcdn.com/w320/mz.png",
-                "text": "Mozambique - Mozambique"
+                "text": "Mozambique"
             },
             {
                 "image": "https://flagcdn.com/w320/ao.png",
-                "text": "Angola - Angola"
+                "text": "Angola"
             },
             {
                 "image": "https://flagcdn.com/w320/bw.png",
-                "text": "Botswana - Botswana"
+                "text": "Botswana"
             },
             {
                 "image": "https://flagcdn.com/w320/na.png",
-                "text": "Namibia - Namibie"
+                "text": "Namibia"
             },
             {
                 "image": "https://flagcdn.com/w320/mw.png",
-                "text": "Malawi - Malawi"
+                "text": "Malawi"
             },
             {
                 "image": "https://flagcdn.com/w320/mg.png",
-                "text": "Madagascar - Madagascar"
+                "text": "Madagascar"
             },
             {
                 "image": "https://flagcdn.com/w320/mu.png",
-                "text": "Mauritius - Maurice"
+                "text": "Mauritius"
             },
             {
                 "image": "https://flagcdn.com/w320/sc.png",
-                "text": "Seychelles - Seychelles"
+                "text": "Seychelles"
             },
             {
                 "image": "https://flagcdn.com/w320/ml.png",
-                "text": "Mali - Mali"
+                "text": "Mali"
             },
             {
                 "image": "https://flagcdn.com/w320/bf.png",
-                "text": "Burkina Faso - Burkina Faso"
+                "text": "Burkina Faso"
             },
             {
                 "image": "https://flagcdn.com/w320/ne.png",
-                "text": "Niger - Niger"
+                "text": "Niger"
             },
             {
                 "image": "https://flagcdn.com/w320/td.png",
-                "text": "Chad - Tchad"
+                "text": "Chad"
             },
             {
                 "image": "https://flagcdn.com/w320/lr.png",
-                "text": "Liberia - Libéria"
+                "text": "Liberia"
             },
             {
                 "image": "https://flagcdn.com/w320/sl.png",
-                "text": "Sierra Leone - Sierra Leone"
+                "text": "Sierra Leone"
             },
             {
                 "image": "https://flagcdn.com/w320/gn.png",
-                "text": "Guinea - Guinée"
+                "text": "Guinea"
             },
             {
                 "image": "https://flagcdn.com/w320/gw.png",
-                "text": "Guinea-Bissau - Guinée-Bissau"
+                "text": "Guinea-Bissau"
             },
             {
                 "image": "https://flagcdn.com/w320/cv.png",
-                "text": "Cape Verde - Cap-Vert"
+                "text": "Cape Verde"
             },
             {
                 "image": "https://flagcdn.com/w320/gm.png",
-                "text": "Gambia - Gambie"
+                "text": "Gambia"
             },
             {
                 "image": "https://flagcdn.com/w320/tg.png",
-                "text": "Togo - Togo"
+                "text": "Togo"
             },
             {
                 "image": "https://flagcdn.com/w320/bj.png",
-                "text": "Benin - Bénin"
+                "text": "Benin"
             },
             {
                 "image": "https://flagcdn.com/w320/ga.png",
-                "text": "Gabon - Gabon"
+                "text": "Gabon"
             },
             {
                 "image": "https://flagcdn.com/w320/gq.png",
-                "text": "Equatorial Guinea - Guinée équatoriale"
+                "text": "Equatorial Guinea"
             },
             {
                 "image": "https://flagcdn.com/w320/st.png",
-                "text": "São Tomé and Príncipe - Sao Tomé-et-Principe"
+                "text": "São Tomé and Príncipe"
             },
             {
                 "image": "https://flagcdn.com/w320/cd.png",
-                "text": "Democratic Republic of Congo - RD Congo"
+                "text": "Democratic Republic of Congo"
             },
             {
                 "image": "https://flagcdn.com/w320/cg.png",
-                "text": "Republic of the Congo - République du Congo"
+                "text": "Republic of the Congo"
             },
             {
                 "image": "https://flagcdn.com/w320/cf.png",
-                "text": "Central African Republic - République centrafricaine"
+                "text": "Central African Republic"
             },
             {
                 "image": "https://flagcdn.com/w320/dj.png",
-                "text": "Djibouti - Djibouti"
+                "text": "Djibouti"
             },
             {
                 "image": "https://flagcdn.com/w320/so.png",
-                "text": "Somalia - Somalie"
+                "text": "Somalia"
             },
             {
                 "image": "https://flagcdn.com/w320/er.png",
-                "text": "Eritrea - Érythrée"
+                "text": "Eritrea"
             },
             {
                 "image": "https://flagcdn.com/w320/sd.png",
-                "text": "Sudan - Soudan"
+                "text": "Sudan"
             },
             {
                 "image": "https://flagcdn.com/w320/ss.png",
-                "text": "South Sudan - Soudan du Sud"
+                "text": "South Sudan"
             },
             {
                 "image": "https://flagcdn.com/w320/ly.png",
-                "text": "Libya - Libye"
+                "text": "Libya"
             },
             {
                 "image": "https://flagcdn.com/w320/mr.png",
-                "text": "Mauritania - Mauritanie"
+                "text": "Mauritania"
             },
             {
                 "image": "https://flagcdn.com/w320/km.png",
-                "text": "Comoros - Comores"
+                "text": "Comoros"
             },
             {
                 "image": "https://flagcdn.com/w320/ls.png",
-                "text": "Lesotho - Lesotho"
+                "text": "Lesotho"
             },
             {
                 "image": "https://flagcdn.com/w320/sz.png",
-                "text": "Eswatini - Eswatini"
+                "text": "Eswatini"
             }
-        ]
+        ];
+
         const galleryItems = items && items.length ? items : defaultItems;
         this.mediasImages = galleryItems.concat(galleryItems);
         this.medias = this.mediasImages.map((data, index) => {

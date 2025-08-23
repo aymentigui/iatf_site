@@ -39,15 +39,18 @@ const NewHeader = () => {
 
                     {/* Menu desktop - visible sur les grands écrans */}
                     <nav className="hidden md:flex items-center space-x-6 mr-4">
+                        <a href="/" className="hover:text-blue-300 mx-2 transition-colors">
+                            {t('header.home')}
+                        </a>
                         <a href="/hotels" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.hotels')}
                         </a>
-                        <a href="/restaurants" className="hover:text-blue-300 mx-2 transition-colors">
+                        {/* <a href="/restaurants" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.restaurants')}
-                        </a>
-                        <a href="/liens" className="hover:text-blue-300 mx-2 transition-colors">
+                        </a> */}
+                        {/* <a href="/liens" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.links')}
-                        </a>
+                        </a> */}
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -104,26 +107,33 @@ const NewHeader = () => {
 
                             <nav className="flex flex-col space-y-6">
                                 <a
+                                    href="/"
+                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    {t('header.home')}
+                                </a>
+                                <a
                                     href="/hotels"
                                     className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('header.hotels')}
                                 </a>
-                                <a
+                                {/* <a
                                     href="/restaurants"
                                     className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('header.restaurants')}
-                                </a>
-                                <a
+                                </a> */}
+                                {/* <a
                                     href="/liens"
                                     className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('header.links')}
-                                </a>
+                                </a> */}
                             </nav>
 
                             <div className="mt-auto pt-6 border-t border-blue-700">
