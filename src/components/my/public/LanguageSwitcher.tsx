@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter, usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Cookies from 'js-cookie';
@@ -20,6 +20,15 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
+
+  useEffect(() => {
+    // Vérifie si un cookie de langue est défini, sinon utilise la langue par défaut
+    const savedLanguage = Cookies.get('lang') || locale || 'en';
+    const language = languages.find((l) => l.code === savedLanguage);
+    if (language) {
+      setSelectedLanguage(language.name);
+    }
+  }, [locale]);
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
 
