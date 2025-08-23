@@ -27,7 +27,7 @@ const NewHeader = () => {
                     <Link href="/">
                         <div className="flex items-center gap-3">
                             {/* Logo */}
-                            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white/20">
+                            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white p-2">
                                 <Image
                                     src="/logo-transtev.png"
                                     alt="IATF2025 Logo"
@@ -38,7 +38,7 @@ const NewHeader = () => {
                             </div>
                             <div>
                                 <h1 className="text-xl font-bold">IATF2025</h1>
-                                <p className="text-sm opacity-80">ALGER</p>
+                                <p className="text-sm opacity-80">{t("footer.address")}</p>
                             </div>
                         </div>
                     </Link>
@@ -46,7 +46,7 @@ const NewHeader = () => {
                     {/* Menu desktop */}
                     <nav className="hidden md:flex items-center space-x-6 mr-4">
                         <a href="/" className="hover:text-blue-300 mx-2 transition-colors">
-                            {t('header.home')}
+                            {t('Header.home')}
                         </a>
                         <a href="/hotels" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.hotels')}
@@ -110,7 +110,7 @@ const NewHeader = () => {
                                     className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    {t('header.home')}
+                                    {t('Header.home')}
                                 </a>
                                 <a
                                     href="/hotels"
