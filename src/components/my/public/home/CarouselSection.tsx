@@ -26,7 +26,7 @@ export default function CarouselSection() {
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover object-top rounded-2xl shadow-lg"
+              className="w-full h-full object-cover object-left-top lg:object-top rounded-2xl shadow-lg"
             />
           </SwiperSlide>
         ))}
