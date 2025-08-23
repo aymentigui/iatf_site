@@ -18,25 +18,23 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("");
-
+  const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
 
   useEffect(() => {
-    // Vérifie si un cookie de langue est défini, sinon utilise la langue par défaut
+    // Vérifie si un cookie de langue est défini, sinon utilise locale ou 'en'
     const savedLanguage = Cookies.get('lang') || locale || 'en';
     const language = languages.find((l) => l.code === savedLanguage);
     if (language) {
-      setSelectedLanguage(language.name);
+      setCurrentLanguage(language);
     }
   }, [locale]);
 
-  const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
-
   const handleLanguageChange = (newLocale: string) => {
-    Cookies.set('lang', newLocale, { expires: 7 }); // Définit un cookie de langue valide pendant 7 jours
-    setSelectedLanguage(languages.find((l) => l.code === newLocale)!.name);
-    router.refresh()
+    Cookies.set('lang', newLocale, { expires: 7 }); // cookie langue valable 7 jours
+    const language = languages.find((l) => l.code === newLocale)!;
+    setCurrentLanguage(language);
     setIsOpen(false);
+    router.refresh(); // force re-render côté serveur (utile avec next-intl par ex.)
   };
 
   return (
@@ -63,7 +61,7 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
                 key={language.code}
                 onClick={() => handleLanguageChange(language.code)}
                 className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors ${
-                  language.code === locale ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                  language.code === currentLanguage.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
                 }`}
               >
                 <span className="text-lg">{language.flag}</span>

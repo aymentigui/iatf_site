@@ -9,7 +9,7 @@ export default getRequestConfig(async () => {
   const locale = userCookies.get('lang')?.value || 'en'; // Par défaut 'en'
 
   // Vérifiez si la langue est supportée, sinon revenez à 'en'
-  const supportedLocales = ['en', 'fr','ar'];
+  const supportedLocales = ['en', 'fr','ar', 'pt', 'es'];
   const selectedLocale = supportedLocales.includes(locale) ? locale : 'en';
 
   // Charger les messages pour la langue sélectionnée
