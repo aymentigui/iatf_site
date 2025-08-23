@@ -26,7 +26,7 @@ export async function createContactMessage(data: any): Promise<{ status: number;
 
         const { name, subject, phone, email, message } = result.data
 
-        await prisma.contact.create(
+        const contact=await prisma.contact.create(
             {
                 data: {
                     name, subject, phone, email, message
@@ -34,7 +34,7 @@ export async function createContactMessage(data: any): Promise<{ status: number;
             }
         )
 
-        return { status: 200, data: { message: "restaurant created" } }
+        return { status: 200, data: contact }
     } catch (error) {
         console.error("An error occurred in createRestaurant:", error)
         return { status: 500, data: { message: e("error") } }
