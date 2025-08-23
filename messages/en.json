@@ -384,6 +384,8 @@
         "subtitle": "Have a question? Contact our team for any information.",
         "form": "Contact Form",
         "links": "Useful Links",
+        "subject":"Subject",
+        "phone":"Phone number",
         "name": "Name",
         "email": "Email",
         "message": "Message",

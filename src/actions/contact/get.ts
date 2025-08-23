@@ -22,7 +22,7 @@ export async function getContactMessages(): Promise<{ status: number; data: any 
     return {
       status: 200,
       data: {
-        restaurants: messages,
+        messages: messages,
         total,
       },
     }

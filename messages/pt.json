@@ -383,6 +383,8 @@
         "links": "Useful Links",
         "name": "Name",
         "email": "Email",
+        "phone":"Número de telefone",
+        "subject":"assunto",
         "message": "Message",
         "send": "Send"
     },

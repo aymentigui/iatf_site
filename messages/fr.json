@@ -382,6 +382,8 @@
         "form": "Formulaire de Contact",
         "links": "Liens Utiles",
         "name": "Nom",
+        "subject": "Sujet",
+        "phone": "Téléphone",
         "email": "Email",
         "message": "Message",
         "send": "Envoyer"

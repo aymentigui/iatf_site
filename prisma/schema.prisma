@@ -11,7 +11,7 @@ datasource db {
 }
 
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 model user {
@@ -37,7 +37,7 @@ model user {
 
   created_at DateTime  @default(now())
   deleted_at DateTime?
-  updated_at DateTime @updatedAt
+  updated_at DateTime  @updatedAt
 }
 
 // model Account {
@@ -96,136 +96,130 @@ model userrole {
 }
 
 model session {
-  id           String   @id @default(cuid())
+  id            String   @id @default(cuid())
   session_token String
   user_id       String
-  expires      DateTime
-  user         user     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  expires       DateTime
+  user          user     @relation(fields: [user_id], references: [id], onDelete: Cascade)
   device_name   String?
   device_type   String?
-  browser      String?
-  os           String?
-  active       Boolean  @default(true)
+  browser       String?
+  os            String?
+  active        Boolean  @default(true)
   created_at    DateTime @default(now())
 }
 
-
 model verificationtoken {
-  id        String   @id @default(cuid())
-  email     String
-  token     String
+  id         String   @id @default(cuid())
+  email      String
+  token      String
   expired_at DateTime
 }
 
 model twofactorconfermation {
-  id        String   @id @default(cuid())
+  id         String   @id @default(cuid())
   user_id    String
   expired_at DateTime
-  user      user     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user       user     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@unique([user_id])
 }
 
 model resetpasswordconfermation {
-  id        String   @id @default(cuid())
+  id         String   @id @default(cuid())
   user_id    String
   expired_at DateTime
-  user      user     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user       user     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@unique([user_id])
 }
 
-
-
 model files {
-    id         String    @id @default(cuid())
-    name       String
-    mime_type  String
-    extention  String
-    size       Int
-    path       String
-    created_at DateTime  @default(now())
-    deleted_at DateTime?
-    added_from String?
+  id         String    @id @default(cuid())
+  name       String
+  mime_type  String
+  extention  String
+  size       Int
+  path       String
+  created_at DateTime  @default(now())
+  deleted_at DateTime?
+  added_from String?
 
-    can_view_permissions     String?
-    can_download_permissions String?
-    can_delete_permissions   String?
+  can_view_permissions     String?
+  can_download_permissions String?
+  can_delete_permissions   String?
 
-    // Définition des permissions spécifiques aux utilisateurs
-    can_view_users     String?
-    can_download_users String?
-    can_delete_users   String?
+  // Définition des permissions spécifiques aux utilisateurs
+  can_view_users     String?
+  can_download_users String?
+  can_delete_users   String?
 
-    // Indicateur si seul l'admin a le contrôle total
-    admin_view_only     Boolean @default(false)
-    admin_download_only Boolean @default(false)
-    admin_delete_only   Boolean @default(false)
+  // Indicateur si seul l'admin a le contrôle total
+  admin_view_only     Boolean @default(false)
+  admin_download_only Boolean @default(false)
+  admin_delete_only   Boolean @default(false)
 }
-
-
-
 
 // Modèle Prisma pour les restaurants
 model restaurant {
-  id                    Int      @id @default(autoincrement())
-  
+  id Int @id @default(autoincrement())
+
   // Noms multilingues
-  nomfr                 String?
-  nomar                 String?
-  nomen                 String?
-  nomes                 String?
-  nompt                 String?
-  
+  nomfr String?
+  nomar String?
+  nomen String?
+  nomes String?
+  nompt String?
+
   // Descriptions multilingues
-  descriptionfr         String?   @db.Text
-  descriptionen         String?  @db.Text
-  descriptionar         String?  @db.Text
-  descriptiones         String?  @db.Text
-  descriptionpt         String?  @db.Text
-  
+  descriptionfr String? @db.Text
+  descriptionen String? @db.Text
+  descriptionar String? @db.Text
+  descriptiones String? @db.Text
+  descriptionpt String? @db.Text
+
   // Adresses multilingues
-  adressefr             String?
-  adresseen             String?
-  adressear             String?
-  adressees             String?
-  adressept             String?
-  
+  adressefr String?
+  adresseen String?
+  adressear String?
+  adressees String?
+  adressept String?
+
   // Coordonnées de contact
-  telephone             String?
-  email                 String?
-  site_web              String?
-  
+  telephone String?
+  email     String?
+  site_web  String?
+
   // Types de cuisine multilingues
-  type_cuisinefr       String?
-  type_cuisineen        String?
-  type_cuisinear        String?
-  type_cuisinees        String?
-  type_cuisinept        String?
-  
+  type_cuisinefr String?
+  type_cuisineen String?
+  type_cuisinear String?
+  type_cuisinees String?
+  type_cuisinept String?
+
   // Informations pratiques
-  prix_moyen            Decimal?  @db.Decimal(8, 2)
-  horaires_ouverture    String?
-  
+  prix_moyen         Decimal? @db.Decimal(8, 2)
+  horaires_ouverture String?
+
   // Géolocalisation
-  latitude              Decimal?  @db.Decimal(10, 8)
-  longitude             Decimal?  @db.Decimal(11, 8)
-  
+  latitude  Decimal? @db.Decimal(10, 8)
+  longitude Decimal? @db.Decimal(11, 8)
+
   // Média
-  image_id             String?
-  
+  image_id String?
+
   // Spécialités multilingues
-  specialitesfr         String?  @db.Text
-  specialitesen         String?  @db.Text
-  specialitesar         String?  @db.Text
-  specialiteses         String?  @db.Text
-  specialitespt         String?  @db.Text
-  
+  specialitesfr String? @db.Text
+  specialitesen String? @db.Text
+  specialitesar String? @db.Text
+  specialiteses String? @db.Text
+  specialitespt String? @db.Text
+
   // Statut et métadonnées
-  statut                String   @default("actif") // actif, inactif, suspendu
-  date_creation         DateTime @default(now())
-  date_modification     DateTime @updatedAt
-  
+  statut            String   @default("actif") // actif, inactif, suspendu
+  date_creation     DateTime @default(now())
+  date_modification DateTime @updatedAt
+
   // Index pour optimiser les recherches
   @@index([statut])
   @@index([nomar])
@@ -238,74 +232,87 @@ model restaurant {
 }
 
 model hotels {
-  id                 Int       @id @default(autoincrement())
-  nom_fr             String?   @db.VarChar(255)
-  nom_ar             String?   @db.VarChar(255)
-  nom_en             String?   @db.VarChar(255)
-  nom_es             String?   @db.VarChar(255)
-  nom_pt             String?   @db.VarChar(255)
-  description_fr     String?   @db.Text
-  description_en     String?   @db.Text
-  description_ar     String?   @db.Text
-  description_es     String?   @db.VarChar(255)
-  description_pt     String?   @db.VarChar(255)
-  adresse_fr         String?   @db.Text
-  adresse_en         String?   @db.Text
-  adresse_ar         String?   @db.Text
-  adresse_es         String?   @db.VarChar(255)
-  adress_pt          String?   @db.VarChar(255)
-  telephone          String?   @db.VarChar(100)
-  wilaya_fr          String?   @db.VarChar(255)
-  wilaya_ar          String?   @db.VarChar(255)
-  wilaya_en          String?   @db.VarChar(255)
-  wilaya_es          String?   @db.VarChar(255)
-  wilaya_pt          String?   @db.VarChar(255)
-  email              String?   @db.VarChar(100)
-  site_web           String?   @db.VarChar(255)
-  etoiles            Int?
-  prix_min           Decimal?  @db.Decimal(10, 2)
-  prix_max           Decimal?  @db.Decimal(10, 2)
-  latitude           Decimal?  @db.Decimal(10, 8)
-  longitude          Decimal?  @db.Decimal(11, 8)
-  image_url          String?   @db.VarChar(255)
-  services_fr        String?   @db.Text
-  services_en        String?   @db.Text
-  services_ar        String?   @db.Text
-  services_es        String?   @db.Text
-  services_pt        String?   @db.Text
-  statut             String?   @db.VarChar(10) @default("actif")
-  debut_depart       DateTime? @db.Time
-  fin_depart         DateTime? @db.Time
-  intervalle_depart  Int?
-  debut_retour       DateTime? @db.Time
-  fin_retour         DateTime? @db.Time
-  intervalle_retour  Int?
-  zone_fr            String?   @db.VarChar(50)
-  zone_ar            String?   @db.VarChar(55)
-  zone_en            String?   @db.VarChar(55)
-  zone_es            String?   @db.VarChar(55)
-  zone_pt            String?   @db.VarChar(55)
-  quai_fr            String?   @db.VarChar(50)
-  quai_ar            String?   @db.VarChar(55)
-  quai_en            String?   @db.VarChar(55)
-  quai_es            String?   @db.VarChar(55)
-  quai_pt            String?   @db.VarChar(55)
-  distance           Decimal?  @db.Decimal(10, 2)
-  tempestimer        Decimal? 
-  date_creation      DateTime? @default(now()) @db.Timestamp(6)
-  date_modification  DateTime? @updatedAt @db.Timestamp(6)
+  id                Int       @id @default(autoincrement())
+  nom_fr            String?   @db.VarChar(255)
+  nom_ar            String?   @db.VarChar(255)
+  nom_en            String?   @db.VarChar(255)
+  nom_es            String?   @db.VarChar(255)
+  nom_pt            String?   @db.VarChar(255)
+  description_fr    String?   @db.Text
+  description_en    String?   @db.Text
+  description_ar    String?   @db.Text
+  description_es    String?   @db.VarChar(255)
+  description_pt    String?   @db.VarChar(255)
+  adresse_fr        String?   @db.Text
+  adresse_en        String?   @db.Text
+  adresse_ar        String?   @db.Text
+  adresse_es        String?   @db.VarChar(255)
+  adress_pt         String?   @db.VarChar(255)
+  telephone         String?   @db.VarChar(100)
+  wilaya_fr         String?   @db.VarChar(255)
+  wilaya_ar         String?   @db.VarChar(255)
+  wilaya_en         String?   @db.VarChar(255)
+  wilaya_es         String?   @db.VarChar(255)
+  wilaya_pt         String?   @db.VarChar(255)
+  email             String?   @db.VarChar(100)
+  site_web          String?   @db.VarChar(255)
+  etoiles           Int?
+  prix_min          Decimal?  @db.Decimal(10, 2)
+  prix_max          Decimal?  @db.Decimal(10, 2)
+  latitude          Decimal?  @db.Decimal(10, 8)
+  longitude         Decimal?  @db.Decimal(11, 8)
+  image_url         String?   @db.VarChar(255)
+  services_fr       String?   @db.Text
+  services_en       String?   @db.Text
+  services_ar       String?   @db.Text
+  services_es       String?   @db.Text
+  services_pt       String?   @db.Text
+  statut            String?   @default("actif") @db.VarChar(10)
+  debut_depart      DateTime? @db.Time
+  fin_depart        DateTime? @db.Time
+  intervalle_depart Int?
+  debut_retour      DateTime? @db.Time
+  fin_retour        DateTime? @db.Time
+  intervalle_retour Int?
+  zone_fr           String?   @db.VarChar(50)
+  zone_ar           String?   @db.VarChar(55)
+  zone_en           String?   @db.VarChar(55)
+  zone_es           String?   @db.VarChar(55)
+  zone_pt           String?   @db.VarChar(55)
+  quai_fr           String?   @db.VarChar(50)
+  quai_ar           String?   @db.VarChar(55)
+  quai_en           String?   @db.VarChar(55)
+  quai_es           String?   @db.VarChar(55)
+  quai_pt           String?   @db.VarChar(55)
+  distance          Decimal?  @db.Decimal(10, 2)
+  tempestimer       Decimal?
+  date_creation     DateTime? @default(now()) @db.Timestamp(6)
+  date_modification DateTime? @updatedAt @db.Timestamp(6)
 }
 
-
-model contact{
-  id          String   @id @default(cuid())
+model contact {
+  id          String        @id @default(cuid())
   name        String
   email       String
   phone       String?
   subject     String
   message     String
-  viewed      Boolean  @default(false)
-  created_at  DateTime @default(now())
-  updated_at  DateTime @updatedAt
-  is_read     Boolean  @default(false)
+  viewed      Boolean       @default(false)
+  created_at  DateTime      @default(now())
+  updated_at  DateTime      @updatedAt
+  is_read     Boolean       @default(false)
+  verified    Boolean       @default(false)
+  Contact_otp Contact_otp[]
+}
+
+model Contact_otp {
+  id         String   @id @default(cuid())
+  code       String
+  expires_at DateTime
+  used       Boolean  @default(false)
+  created_at DateTime @default(now())
+
+  // Relation avec ContactMessage
+  contact_id String
+  contact    contact @relation(fields: [contact_id], references: [id])
 }
