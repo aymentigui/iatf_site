@@ -18,7 +18,7 @@ const HotelsAndRestaurants = () => {
     const locale = params.locale as string;
 
     const [hotels, setHotels] = useState([]);
-    const [restaurants, setRestaurants] = useState([]);
+    // const [restaurants, setRestaurants] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -29,12 +29,13 @@ const HotelsAndRestaurants = () => {
         setLoading(true);
         try {
             const [restaurantsResponse, hotelsResponse] = await Promise.all([
-                getRestos({
-                    search: "",
-                    statut: undefined,
-                    page: 1,
-                    limit: 3,
-                }),
+                // getRestos({
+                //     search: "",
+                //     statut: undefined,
+                //     page: 1,
+                //     limit: 3,
+                // }),
+                [],
                 getHotels({
                     search: "",
                     statut: undefined,
@@ -43,13 +44,13 @@ const HotelsAndRestaurants = () => {
                 }),
             ]);
             const hotelsData = await hotelsResponse;
-            const restaurantsData = await restaurantsResponse;
+            // const restaurantsData = await restaurantsResponse;
             if (hotelsData.status === 200 && hotelsData.data.hotels) {
                 setHotels(hotelsData.data.hotels);
             }
-            if (restaurantsData.status === 200 && restaurantsData.data.restaurants) {
-                setRestaurants(restaurantsData.data.restaurants);
-            }
+            // if (restaurantsData.status === 200 && restaurantsData.data.restaurants) {
+            //     setRestaurants(restaurantsData.data.restaurants);
+            // }
         } catch (error) {
             console.error("Error fetching data:", error);
         } finally {
@@ -105,7 +106,7 @@ const HotelsAndRestaurants = () => {
                     )}
                 </div>
             </section>
-
+{/* 
             <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-100">
                 <div className="container mx-auto px-4">
                     <motion.div
@@ -150,7 +151,7 @@ const HotelsAndRestaurants = () => {
                         </>
                     )}
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }
