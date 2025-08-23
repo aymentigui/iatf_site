@@ -17,7 +17,7 @@ const NewHeader = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [activeZone, setActiveZone] = useState<string | null>(null)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const targetDate = new Date('2025-09-15T00:00:00Z');
+    const targetDate = new Date('2025-09-04T00:00:00Z');
 
 
     return (
