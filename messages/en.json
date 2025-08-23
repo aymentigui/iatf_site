@@ -1,0 +1,838 @@
+{
+    "Index": {
+        "title": "Hello World"
+    },
+    "System": {
+        "title": "System",
+        "createsuccess": "Create success",
+        "createfail": "Create failed",
+        "updatesuccess": "Update success",
+        "updatefail": "Update failed",
+        "deletesuccess": "Delete success",
+        "deletefail": "Delete failed",
+        "subscribesuccess": "Subscribe/Unsubscribe success",
+        "subscribefail": "Subscribe/Unsubscribe failed",
+        "create": "Create",
+        "save": "Save",
+        "update": "Update",
+        "edit": "Edit",
+        "confirm": "Confirm",
+        "check": "Check",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "loading": "Loading...",
+        "createdat": "Created at",
+        "emailsent": "Email sent",
+        "login": "Login",
+        "verificationemailsent": "Verification email sent",
+        "resendthecode": "Resend the code",
+        "mustwait1minutes": "You must wait 1 minutes",
+        "loginsuccess": "Login success",
+        "register": "Register",
+        "registersuccess": "Register success",
+        "registerorlogin": "Register or Login",
+        "dashboard": "Dashboard",
+        "settings": "Settings",
+        "logout": "Logout",
+        "next": "Next",
+        "reset": "Reset",
+        "options": "Options",
+        "selectoption": "Select option",
+        "noresults": "No results",
+        "search": "Search",
+        "import": "Import",
+        "import_data": "Import data",
+        "tabledata": "Table data",
+        "back": "Back",
+        "pagesize": "Page size",
+        "pagesizeplaceholder": "Select page size",
+        "page": "Page",
+        "all": "All",
+        "of": "of",
+        "total": "Total",
+        "selected": "Selected",
+        "user": "User",
+        "users": "Users",
+        "anonymous": "Anonymous",
+        "posting": "Posting",
+        "image": "Image",
+        "video": "Video",
+        "file": "File",
+        "text": "Text",
+        "document": "Document",
+        "audio": "Audio",
+        "other": "Other",
+        "number": "Number",
+        "date": "Date",
+        "time": "Time",
+        "password": "Password",
+        "select": "Select",
+        "checkbox": "Checkbox",
+        "radio": "Radio",
+        "json": "JSON",
+        "csv": "CSV",
+        "xlsx": "XLSX",
+        "pdf": "PDF",
+        "html": "HTML",
+        "html5": "HTML5",
+        "email": "Email",
+        "phone": "Phone number",
+        "url": "URL",
+        "export": "Export",
+        "exportall": "Export all",
+        "exportselected": "Export selected",
+        "exportCSV": "Export CSV",
+        "exportXLSX": "Export XLSX",
+        "exportPDF": "Export PDF",
+        "exportHTML": "Export HTML",
+        "exportHTML5": "Export HTML5",
+        "mustrefreshtoseedata": "Please refresh the page to see the new data.",
+        "downloadjustselected": "Download just selected",
+        "count": "Count",
+        "confermationdelete": "Are you absolutely sure?",
+        "confermationdeletemessage": "This action cannot be undone. This will permanently delete your data and remove your data from our servers."
+    },
+    "Menu": {
+        "title": "Menu",
+        "home": "Home",
+        "settings": "Settings",
+        "roles": "Roles",
+        "users": "Users",
+        "more": "More",
+        "testimportsheet": "Import data from sheet",
+        "pdfutil": "PDF Utility",
+        "fileslocalstorage": "Files local storage",
+        "files": "Files",
+        "files_upload": "Upload files",
+        "blog": "Blog",
+        "logout": "Logout",
+        "footer": "© 2025 All rights reserved"
+    },
+    "Error": {
+        "title": "Error",
+        "error": "Error",
+        "errors": "Errors",
+        "getInfo": "Error in getinfo",
+        "unauthorized": "Unauthorized",
+        "forbidden": "Forbidden",
+        "usernotfound": "User not found",
+        "verificationtokennotfound": "Verification token not found",
+        "invalidcode": "Invalid code",
+        "codeexpired": "Code expired",
+        "invalidtoken": "Invalid token",
+        "tokenexpired": "Token expired",
+        "badrequest": "Bad request",
+        "errorscreating": "Error creating"
+    },
+    "Settings": {
+        "title": "Settings",
+        "username": "Username",
+        "change username": "Change Username",
+        "personalinfo": "Personal Information",
+        "change info": "Change personal information",
+        "email": "Email",
+        "emailorusername": "Email or Username",
+        "change email": "Change Email",
+        "password": "Password",
+        "change password": "Change Password",
+        "twofactor": "Two Factor Confermation",
+        "twofactordescription": "If you enable two factor confermation, you will be asked to provide a unique authentication code during each login.",
+        "resetpassword": "Reset Password",
+        "currentpassword": "Current Password",
+        "newpassword": "New Password",
+        "confirmpassword": "Confirm Password",
+        "codeverification": "Verification code",
+        "forgetpassword": "Forget Password ?",
+        "youhavenotaccount": "You don't have an account? Click here",
+        "youhaveaccount": "You have an account? Click here"
+    },
+    "Sessions": {
+        "title": "Sessions",
+        "ip": "IP",
+        "browser": "Browser",
+        "device": "Device",
+        "os": "OS",
+        "lastactivity": "Last Activity",
+        "mobile": "Mobile",
+        "desktop": "Desktop",
+        "tablet": "Tablet",
+        "tv": "TV",
+        "console": "Console",
+        "car": "Car",
+        "unknown": "Unknown",
+        "activesessions": "Active Sessions",
+        "sessionid": "Session ID",
+        "deletesession": "Delete Session",
+        "deleteallsessions": "Delete All Sessions",
+        "sessionnotfound": "Session not found"
+    },
+    "Roles": {
+        "title": "Roles",
+        "name": "Name",
+        "description": "Description",
+        "addrole": "Add Role",
+        "updaterole": "Update Role",
+        "deleterole": "Delete Role",
+        "totalusers": "Total Users",
+        "searchroles": "Search Roles",
+        "rolename": "Role Name",
+        "rolenamerequired": "Please enter a role name",
+        "permissionrequired": "You need to select at least one permission"
+    },
+    "Users": {
+        "title": "Users",
+        "username": "Username",
+        "email": "Email",
+        "roles": "Roles",
+        "adduser": "Add User",
+        "updateuser": "Update User",
+        "deleteuser": "Delete User",
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "password": "Password",
+        "role": "Role",
+        "isadmin": "Admin",
+        "usernamerequired": "Please enter a username",
+        "username6": "Username must be at least 6 characters",
+        "username20": "Username must be at most 20 characters",
+        "usernameinvalid": "Username is invalid",
+        "emailrequired": "Please enter an email",
+        "firstnamerequired": "Please enter a first name",
+        "lastnamerequired": "Please enter a last name",
+        "passwordrequired": "Please enter a password",
+        "emailinvalid": "Email is invalid",
+        "emailexists": "Email already exists",
+        "usernameexists": "Username already exists",
+        "password6": "Password must contain at least 6 characters",
+        "confirmpasswordnotmatch": "Confirm Password not match",
+        "confirmpasswordrequired": "Please enter a confirm password",
+        "currentpasswordrequired": "Current Password is required",
+        "newpasswordrequired": "New Password is required",
+        "currentpasswordinvalid": "Current Password is invalid",
+        "selectrole": "Please select a role",
+        "avatarinvalid": "Avatar is invalid",
+        "imagerequired": "Image is required",
+        "onlyimagesallowed": "Only images are allowed",
+        "selectusers": "Select users",
+        "deleteusers": "Delete users",
+        "confermationdelete": "Are you absolutely sure?",
+        "confermationdeletemessage": "This action cannot be undone. This will permanently delete your users and remove your data from our servers."
+    },
+    "Permissions": {
+        "title": "Permissions",
+        "dashboard_view": "Dashboard View",
+        "users_view": "Users View",
+        "users_create": "Users Create",
+        "users_update": "Users Update",
+        "users_delete": "Users Delete",
+        "roles_view": "Roles View",
+        "roles_create": "Roles Create",
+        "roles_update": "Roles Update",
+        "roles_delete": "Roles Delete",
+        "files_view": "Files View",
+        "files_create": "Files Create",
+        "files_update": "Files Update",
+        "files_delete": "Files Delete"
+    },
+    "Files": {
+        "title": "Files",
+        "uploadfile": "Upload File",
+        "deletefile": "Delete File",
+        "deleteallfiles": "Delete All Files",
+        "filename": "File Name",
+        "filesize": "File Size",
+        "filetype": "File Type",
+        "filedate": "File Date",
+        "fileextension": "File Extension",
+        "fileurl": "File URL",
+        "fileexists": "File already exists",
+        "onlyimagesallowed": "Only images are allowed",
+        "filedoesnotexist": "File does not exist",
+        "filesizemax": "File size max is ",
+        "draganddrop": "Drag and drop files here",
+        "draganddrop1": "Drag and drop file here",
+        "drop": "Drop file here...",
+        "drop1": "Drop file here...",
+        "selectoneormorefiles": "Select one or more files to upload.",
+        "selectonefile": "Select one file to upload.",
+        "selectfilesheet": "Select file sheet",
+        "filespermission": "Files Permission",
+        "public": "Public",
+        "allusers": "All Users",
+        "viewpermissions": "Who can view files",
+        "downloadpermissions": "Who can download files",
+        "deletepermissions": "Who can delete files",
+        "havepermission": "Who have permission",
+        "users": "Users",
+        "justme": "Just me",
+        "confermationdeletemessage": "This action cannot be undone. This will permanently delete your file and remove your data from our servers."
+    },
+    "Header": {
+        "home": "Home",
+        "settings": "Settings",
+        "aboutus": "About me",
+        "contactus": "Contact me",
+        "logout": "Logout",
+        "login": "Login",
+        "register": "Register",
+        "dashboard": "Dashboard"
+    },
+    "Blogs": {
+        "title": "Blogs",
+        "addblog": "Add Blog",
+        "updateblog": "Update Blog",
+        "deleteblog": "Delete Blog",
+        "titlerequired": "Please enter a title",
+        "contentrequired": "Please enter a content",
+        "statusrequired": "Please choose a status",
+        "publish": "Publish",
+        "draft": "Draft",
+        "blognotfound": "Blog not found"
+    },
+    "TextEditor": {
+        "placeholder": "Write something..."
+    },
+    "sheet": {
+        "title": "Sheet",
+        "addsheet": "Add Sheet",
+        "updatesheet": "Update Sheet",
+        "deletesheet": "Delete Sheet",
+        "titlerequired": "Please enter a title",
+        "contentrequired": "Please enter a content",
+        "statusrequired": "Please choose a status",
+        "publish": "Publish",
+        "draft": "Draft",
+        "sheetnotfound": "Sheet not found",
+        "required": "This field is required",
+        "invalidemail": "This field must be an email",
+        "invalidphone": "This field must be a phone number",
+        "invalidurl": "This field must be a URL",
+        "invaliddate": "This field must be a date",
+        "invalidnumber": "This field must be a number",
+        "invalidtime": "This field must be a time",
+        "invalidpassword": "This field must be a text at least 8 characters",
+        "invalidtext": "This field must be a text",
+        "invalidfile": "This field must be a file",
+        "invalidimage": "This field must be an image",
+        "invalidjson": "This field must be a JSON",
+        "invalidcsv": "This field must be a CSV",
+        "invalidxlsx": "This field must be an XLSX",
+        "invalidpdf": "This field must be a PDF",
+        "invalidhtml": "This field must be an HTML",
+        "invalidhtml5": "This field must be an HTML5"
+    },
+    "header": {
+        "title": "IATF2025 ALGER STARTS IN",
+        "days": "days",
+        "hours": "hours",
+        "minutes": "minutes",
+        "seconds": "seconds",
+        "hotels": "Hotels",
+        "restaurants": "Restaurants",
+        "links": "Useful Links"
+    },
+    "hero": {
+        "title": "IATF2025 ALGER",
+        "subtitle": "Intra-African Commercial Fair",
+        "description": "Africa's largest commercial fair returns to Algiers from April 15-19, 2025"
+    },
+    "venue": {
+        "title": "Safex - Exhibition Palace",
+        "description": "An emblematic space that has been hosting the private sector since 2015"
+    },
+    "bus": {
+        "title": "Bus Station",
+        "description": "Innovative transport center for IATF2025 visitors",
+        "features": {
+            "direction": "Direction",
+            "safe": "Safe",
+            "strategic": "Strategic Location"
+        }
+    },
+    "support": {
+        "title": "Support & Assistance",
+        "subtitle": "On-site agents",
+        "description": "Agents present on each platform to guide customers",
+        "signaling": "Signaling",
+        "hours": "Regular Hours"
+    },
+    "organization": {
+        "title": "Station Organization",
+        "description": "Organized by zones for smooth departures",
+        "zones": "Zone Distribution"
+    },
+    "transport": {
+        "title": "Guest Transport",
+        "description": "Comfort, punctuality and efficiency",
+        "team": "Dedicated Support Team",
+        "shuttle": "Comfortable Shuttles"
+    },
+    "sectors": {
+        "title": "Strategic Sectors",
+        "subtitle": "Discover key sectors for Africa's economic development",
+        "agriculture": "Agriculture",
+        "industry": "Industry",
+        "energy": "Energy",
+        "finance": "Finance",
+        "research": "Research",
+        "health": "Health",
+        "transport_sector": "Transport",
+        "startups": "Startups"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Have a question? Contact our team for any information.",
+        "form": "Contact Form",
+        "links": "Useful Links",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send"
+    },
+    "footer": {
+        "about": "About IATF2025",
+        "description": "The Intra-African Trade Fair is the major event to promote trade and investment in Africa.",
+        "contact_info": "Contact",
+        "address": "Algiers, Algeria",
+        "phone": "+213 20 17 31 88",
+        "email": "contact@iatf2025.dz",
+        "rights": "© 2025 IATF2025. All rights reserved."
+    },
+    "hotels": {
+        "title": "Hotels",
+        "searchPlaceholder": "Search hotels by name...",
+        "viewCard": "Card view",
+        "viewList": "List view",
+        "noResults": "No hotels found",
+        "loadingMore": "Loading more hotels...",
+        "stars": "stars",
+        "from": "From",
+        "to": "To",
+        "perNight": "per night",
+        "contact": "Contact",
+        "website": "Website",
+        "services": "Services",
+        "address": "Address",
+        "location": "Location",
+        "phone": "Phone",
+        "email": "Email",
+        "distance": "Distance",
+        "estimatedTime": "Estimated time",
+        "zone": "Zone",
+        "dock": "Dock",
+        "page": "Page",
+        "of": "of",
+        "previous": "Previous",
+        "next": "Next",
+        "showingResults": "Showing {from} to {to} of {total} hotels",
+        "hotelDetails": "Hotel Details",
+        "overview": "Overview",
+        "amenities": "Amenities",
+        "contactInfo": "Contact Information",
+        "locationMap": "Location & Map",
+        "priceRange": "Price Range",
+        "rating": "Rating",
+        "bookNow": "Book Now",
+        "callNow": "Call Now",
+        "sendEmail": "Send Email",
+        "visitWebsite": "Visit Website",
+        "getDirections": "Get Directions",
+        "hotelNotFound": "Hotel not found",
+        "backToHotels": "Back to Hotels",
+        "gallery": "Gallery",
+        "reviews": "Reviews",
+        "facilities": "Facilities",
+        "policies": "Policies",
+        "subtitle": "Discover a selection of quality hotels for your stay",
+        "viewAll": "View all hotels",
+        "noHotels": "No hotels available at the moment"
+    },
+    "restaurants": {
+        "title": "Restaurants",
+        "searchPlaceholder": "Search restaurants by name or cuisine type...",
+        "viewCard": "Card view",
+        "viewList": "List view",
+        "noResults": "No restaurants found",
+        "loadingMore": "Loading more restaurants...",
+        "from": "From",
+        "to": "To",
+        "contact": "Contact",
+        "website": "Website",
+        "services": "Services",
+        "address": "Address",
+        "location": "Location",
+        "phone": "Phone",
+        "email": "Email",
+        "distance": "Distance",
+        "estimatedTime": "Estimated time",
+        "zone": "Zone",
+        "dock": "Dock",
+        "page": "Page",
+        "of": "of",
+        "previous": "Previous",
+        "next": "Next",
+        "showingResults": "Showing {from} to {to} of {total} restaurants",
+        "restaurantDetails": "Restaurant details",
+        "overview": "Overview",
+        "amenities": "Amenities",
+        "contactInfo": "Contact information",
+        "locationMap": "Location and map",
+        "cuisineType": "Cuisine type",
+        "rating": "Rating",
+        "callNow": "Call now",
+        "sendEmail": "Send email",
+        "visitWebsite": "Visit website",
+        "getDirections": "Get directions",
+        "restaurantNotFound": "Restaurant not found",
+        "backToRestaurants": "Back to restaurants",
+        "gallery": "Gallery",
+        "reviews": "Reviews",
+        "facilities": "Facilities",
+        "policies": "Policies",
+        "openingHours": "Opening hours",
+        "priceRange": "Price range",
+        "reservation": "Reservation",
+        "menu": "Menu",
+        "filters": "Filters",
+        "sortBy": "Sort by",
+        "all": "All",
+        "openNow": "Open now",
+        "featured": "Featured",
+        "restaurant": "restaurant",
+        "restaurants": "restaurants",
+        "averagePrice": "Average price",
+        "perPerson": "per person",
+        "about": "About",
+        "specialties": "Specialties",
+        "quickInfo": "Quick Info",
+        "subtitle": "Explore a variety of restaurants offering delicious cuisines",
+        "viewAll": "View all restaurants",
+        "noRestaurants": "No restaurants available at the moment"
+    },
+    "officialLinks": {
+        "title": "Liens Officiels MTT2025",
+        "visitSite": "Visiter le Site Officiel",
+        "moreInfo": "Plus d'Informations",
+        "downloadApp": "Télécharger l'App",
+        "onlineServices": "Services en Ligne",
+        "visaInfoTitle": "Visa Information",
+        "visaInfoDescr": "Complete information on entry visas to Algeria for IATF2025 participants, with simplified procedures.",
+        "visaApplication": "Visa Application",
+        "websiteTitle": "Official Website MTT2025",
+        "websiteDescr": "The official website of the Intra-African Trade Fair 2025 with all event information, registration details, and the latest news."
+    },
+    "governmentLinks": {
+        "title": "Government Links",
+        "commerceInterior": {
+            "title": "Ministry of Internal Trade and Market Regulation",
+            "description": "Regulation of the domestic market, price control, ensuring the availability of essential products. Combating speculation and smuggling, protecting consumers, and maintaining purchasing power."
+        },
+        "defense": {
+            "title": "Ministry of National Defense",
+            "description": "Responsible for the country's defense policy, the organization and management of the armed forces."
+        },
+        "foreignAffairs": {
+            "title": "Ministry of Foreign Affairs, National Community Abroad and African Affairs",
+            "description": "Implementation of the country's foreign policy and relations within the African Union and the Arab Maghreb Union."
+        },
+        "interior": {
+            "title": "Ministry of Interior and Local Authorities",
+            "description": "Guaranteeing the exercise of public freedoms in accordance with the law, particularly through the promotion, support, and monitoring of associations and the organization of elections and various ballots."
+        },
+        "agriculture": {
+            "title": "Ministry of Agriculture, Rural Development and Fisheries",
+            "description": "Coordinate rural development policies, monitor projects, support mountain areas. Implement fisheries policy, promote investment in the fishing sector, and manage fishery resources."
+        },
+        "commerceExterior": {
+            "title": "Ministry of Foreign Trade and Export Promotion",
+            "description": "Regulation and promotion of Algerian foreign trade. Develop and implement government policy on foreign trade, ensure the competitiveness of exports for foreign investments."
+        },
+        "transport": {
+            "title": "Ministry of Transport",
+            "description": "Define and implement national policy in the field of transport, covering land transport (roads, railways, urban transport), air and maritime transport."
+        },
+        "tourism": {
+            "title": "Ministry of Tourism and Traditional Industry",
+            "description": "Develop, promote, and regulate the tourism and traditional crafts sectors in Algeria."
+        },
+        "culture": {
+            "title": "Ministry of Culture and Arts",
+            "description": "Protection and promotion of Algerian cultural heritage."
+        },
+        "youth": {
+            "title": "Ministry of Youth",
+            "description": "Develop and implement public policies for youth development, education, and social integration, as well as promoting their rights and civic participation."
+        },
+        "sports": {
+            "title": "Ministry of Sports",
+            "description": "Define and implement government policy in the fields of sports, youth, and community life."
+        },
+        "health": {
+            "title": "Ministry of Health",
+            "description": "Implement government policy in public health, prevention, and organization of healthcare services."
+        }
+    },
+    "emergencyContacts": {
+        "title": "Emergency Contacts",
+        "police": "Police",
+        "fire": "Fire Department",
+        "medical": "Medical Emergency"
+    },
+    "medicalServices": {
+        "title": "Medical Services",
+        "hospitalsTitle": "Main Hospitals",
+        "pharmaciesTitle": "On-Call Pharmacies",
+        "pharmaciesInfo": "On-call pharmacies are open 24/7 for medical emergencies.",
+        "pharmaciesHotline": "On-call pharmacy information number",
+        "hospitals": [
+            {
+                "name": "CHU Mustapha Bacha",
+                "phone": "+21321234567"
+            },
+            {
+                "name": "CHU Maillot",
+                "phone": "+21321234568"
+            },
+            {
+                "name": "Birtraria Hospital",
+                "phone": "+21321234569"
+            },
+            {
+                "name": "El Kettar Hospital",
+                "phone": "+21321234570"
+            },
+            {
+                "name": "CHU Beni Messous",
+                "phone": "+21321234571"
+            },
+            {
+                "name": "Salim Zemirli Hospital",
+                "phone": "+21321234572"
+            },
+            {
+                "name": "CHU Nefissa Hamoud (Ex Parnet)",
+                "phone": "+21321234573"
+            },
+            {
+                "name": "EPH Bachir Mentouri Kouba",
+                "phone": "+21321234574"
+            }
+        ],
+        "pharmacies": [
+            {
+                "name": "Central Pharmacy - Grande Poste",
+                "phone": "+21321234600"
+            },
+            {
+                "name": "El Hamma Pharmacy - Jardin d'Essais",
+                "phone": "+21321234601"
+            },
+            {
+                "name": "Sid Ahmed Ouabdessalam Pharmacy, Hydra",
+                "phone": "+21321234602"
+            },
+            {
+                "name": "Khaldoun On-Call Pharmacy, El Harrach",
+                "phone": "+21321234603"
+            },
+            {
+                "name": "Kherif Pharmacy, Hussein Dey",
+                "phone": "+21321234604"
+            }
+        ]
+    },
+    "bankingServices": {
+        "title": "Banking Services",
+        "publicBanks": "Main Banks",
+        "atms": "Automated Teller Machines",
+        "exchange": "Currency Exchange",
+        "banks": [
+            {
+                "name": "Bank of Algeria (BDA)",
+                "hours": "Hours: 8:30 AM - 3:30 PM",
+                "closed": "Closed: Friday and Saturday"
+            },
+            {
+                "name": "Crédit Populaire d'Algérie (CPA)",
+                "hours": "Hours: 8:30 AM - 3:30 PM",
+                "closed": "Closed: Friday and Saturday"
+            },
+            {
+                "name": "Banque Extérieure d'Algérie (BEA)",
+                "hours": "Hours: 8:30 AM - 3:30 PM",
+                "closed": "Closed: Friday and Saturday"
+            },
+            {
+                "name": "Société Générale Algeria",
+                "hours": "Hours: 8:30 AM - 3:30 PM",
+                "closed": "Closed: Friday and Saturday"
+            }
+        ],
+        "atmsInfo": "ATMs available 24/7 in main areas.",
+        "atmsLocations": [
+            "Houari Boumediene Airport",
+            "Bab Ezzouar Shopping Mall",
+            "Algiers Central Post Office",
+            "Main Hotels"
+        ],
+        "atmsNote": "Visa and Mastercard accepted",
+        "exchangeInfo": "Official exchange offices available for currency conversion.",
+        "exchangePlaces": [
+            "Banks (official rate)",
+            "Airport (24/7)",
+            "Hotels (customer service)",
+            "Authorized exchange offices"
+        ],
+        "exchangeCurrency": "Currency: Algerian Dinar (DZD)",
+        "exchangeRate": "Rate: Varies daily"
+    },
+    "communication": {
+        "title": "Communication",
+        "telecom": "Telecom Operators",
+        "post": "Postal Services",
+        "operators": [
+            {
+                "name": "Mobilis",
+                "desc": "Main operator"
+            },
+            {
+                "name": "Djezzy",
+                "desc": "Wide coverage"
+            },
+            {
+                "name": "Ooredoo",
+                "desc": "Fast internet"
+            },
+            {
+                "name": "Public WiFi",
+                "desc": "Hotels, cafés"
+            }
+        ],
+        "poste": {
+            "title": "Algeria Post",
+            "desc": "National postal service with offices throughout the city.",
+            "offices": [
+                "Grande Poste of Algiers (downtown)",
+                "Hydra Post Office",
+                "El Hamma Post Office",
+                "Express services available"
+            ],
+            "hours": "HOURS: 8am-5pm (Sun - Thu)",
+            "closed": "Closed: Friday & Saturday"
+        }
+    },
+    "partners": {
+        "title": "Nos Partenaires"
+    },
+    "weather": {
+        "title": "Weather Information",
+        "checkWeather": "Check Weather and Temperature",
+        "sunny": "Sunny",
+        "cloudy": "Cloudy",
+        "rainy": "Rainy",
+        "hot": "Hot"
+    },
+    "IATF2025": {
+        "title": "IATF2025 Objectives",
+        "subtitle": "Driving Intra-African Trade Goals",
+        "objectives": [
+            "To bring together continental and global players to explore business and investment opportunities in Africa.",
+            "To serve as a marketplace where buyers and sellers meet and explore business opportunities.",
+            "To provide a platform for B2B and B2G exchanges and development of business opportunities.",
+            "To share trade, investment and market information and to identify solutions to address the challenges affecting Intra-African trade.",
+            "To share information about trade finance and trade facilitation interventions provided by Afreximbank and similar financial institutions.",
+            "To provide a broad platform that connects a broad spectrum of tradable and trade-facilitating activities, namely Creative Industry, Automotives, Seminars and Workshops etc."
+        ]
+    },
+    "KeySectors": {
+        "title": "Key Sectors & Groups at IATF2025",
+        "subtitle": "Explore the Industries IATF2025 Will Focus On:",
+        "sectors": [
+            "Agriculture & Agro Processing",
+            "Automotive",
+            "Clothing & Textiles",
+            "Construction & Infrastructure",
+            "Consumer Goods",
+            "Creative Industries & Entertainment",
+            "Diaspora",
+            "Education",
+            "Energy & Power",
+            "Engineering",
+            "Finance",
+            "Health & Pharmaceuticals",
+            "ICT",
+            "Research, Innovation & Development",
+            "Logistics",
+            "Manufacturing",
+            "Mining & Mineral Beneficiation",
+            "Standards & Quality Infrastructure",
+            "Aviation & Tourism",
+            "Transport (Road, Rail, Maritime, Air)"
+        ],
+        "youthStartups": "Youth Start-ups"
+    },
+    "services": {
+        "support": {
+            "title": "Support and Assistance",
+            "subtitle": "Help services available 24/7",
+            "agents": {
+                "title": "On-site Agents",
+                "description": "Agents available at each platform to guide guests",
+                "action": "Contact an agent"
+            },
+            "signage": {
+                "title": "Signage",
+                "description": "Clear signage to facilitate shuttle access",
+                "action": "View signage"
+            },
+            "schedule": {
+                "title": "Regular Schedules",
+                "description": "Departure times are displayed for each zone",
+                "action": "Check schedules"
+            }
+        },
+        "station": {
+            "title": "Station Organization",
+            "subtitle": "Organized by zones for smooth departures",
+            "zonesTitle": "Zone Distribution",
+            "zonesDescription": "The station is divided into four geographical zones:",
+            "platform": "Platform",
+            "activeZone": "Active zone - Dedicated and supervised platforms",
+            "note": "Each zone has dedicated platforms, clearly identified and supervised by our support team.",
+            "zones": {
+                "est": {
+                    "name": "East Zone",
+                    "description": "Hotels located east of Algiers (Platforms 1 - 32)"
+                },
+                "ouest": {
+                    "name": "West Zone",
+                    "description": "Hotels located west of Algiers (Platforms 33 - 64)"
+                },
+                "centrale": {
+                    "name": "Central Zone",
+                    "description": "Hotels in central Algiers (Platforms 65 - 96)"
+                },
+                "h": {
+                    "name": "Zone H",
+                    "description": "Hotels in Blida, Boumerdes, and Tipaza (Platforms 97 - 128)"
+                }
+            }
+        },
+        "transport": {
+            "title": "Guest Transport",
+            "subtitle": "Premium shuttle service for all your trips",
+            "punctuality": {
+                "title": "Punctuality",
+                "description": "Regular departures every 15 minutes"
+            },
+            "coverage": {
+                "title": "Coverage",
+                "description": "Complete coverage of the Algiers region"
+            },
+            "comfort": {
+                "title": "Comfort",
+                "description": "Modern and air-conditioned vehicles"
+            }
+        }
+    }
+}
