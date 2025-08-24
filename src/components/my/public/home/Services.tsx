@@ -64,7 +64,7 @@ const Services = () => {
   const [activeZone, setActiveZone] = useState<string | null>(null)
 
   return (
-    <section className="lg:p-20 from-blue-50 to-white lg:m-20">
+    <section className="lg:p-20 bg-gradient-to-b from-blue-50 to-white lg:m-20">
       <div className="grid lg:grid-cols-2 gap-8 mb-10">
         {/* Support et Assistance */}
         <Card className="animate-fade-in-scale hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
