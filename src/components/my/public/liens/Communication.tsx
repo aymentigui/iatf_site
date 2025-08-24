@@ -11,12 +11,12 @@ export function Communication() {
   const offices = t.raw("poste.offices") as string[]
 
   return (
-    <section className="max-w-6xl mx-auto py-12">
+    <section className="max-w-6xl mx-auto py-12 p-10">
       <h2 className="text-3xl font-bold text-center mb-10 text-blue-900 border-b-2 border-blue-500 inline-block">
         {t("title")}
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8">
         {/* Télécom */}
         <Card className="shadow-lg rounded-2xl overflow-hidden">
           <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
@@ -25,7 +25,7 @@ export function Communication() {
               {t("telecom")}
             </CardTitle>
           </CardHeader>
-          <CardContent className="grid grid-cols-2 gap-6 py-6">
+          <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-6 py-6">
             {operators.map((op, i) => (
               <div key={i} className="flex flex-col items-center text-center">
                 {op.name.toLowerCase().includes("wifi") ? (
@@ -41,7 +41,7 @@ export function Communication() {
         </Card>
 
         {/* Poste */}
-        <Card className="shadow-lg rounded-2xl overflow-hidden">
+        {/* <Card className="shadow-lg rounded-2xl overflow-hidden">
           <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
             <CardTitle className="flex items-center gap-2 text-lg">
               <Mail className="w-5 h-5" />
@@ -59,7 +59,7 @@ export function Communication() {
             <p className="text-sm font-medium">{t("poste.hours")}</p>
             <p className="text-sm text-red-600">{t("poste.closed")}</p>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </section>
   )

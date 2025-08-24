@@ -51,6 +51,9 @@ const NewHeader = () => {
                         <a href="/hotels" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.hotels')}
                         </a>
+                        <a href="/contact" className="hover:text-blue-300 mx-2 transition-colors">
+                            {t('contact.title')}
+                        </a>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -118,6 +121,13 @@ const NewHeader = () => {
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('header.hotels')}
+                                </a>
+                                <a
+                                    href="/contact"
+                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    {t('contact.title')}
                                 </a>
                             </nav>
 
