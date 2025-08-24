@@ -311,8 +311,9 @@ model Contact_otp {
   expires_at DateTime
   used       Boolean  @default(false)
   created_at DateTime @default(now())
+  email      String?
 
   // Relation avec ContactMessage
-  contact_id String
-  contact    contact @relation(fields: [contact_id], references: [id])
+  contact_id String?
+  contact    contact? @relation(fields: [contact_id], references: [id], onDelete: Cascade)
 }

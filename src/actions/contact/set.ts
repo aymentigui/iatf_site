@@ -26,6 +26,16 @@ export async function createContactMessage(data: any): Promise<{ status: number;
 
         const { name, subject, phone, email, message } = result.data
 
+        const otp_code= await prisma.contact_otp.findFirst({
+            where: { email, used: true, expires_at: { gt: new Date() } }
+        })
+        if (!otp_code) {
+            return { status: 400, data: { message: "Otp expired" } }
+        }
+        await prisma.contact_otp.deleteMany({
+            where: { email }
+        })
+
         const contact=await prisma.contact.create(
             {
                 data: {

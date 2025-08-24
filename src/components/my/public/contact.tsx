@@ -10,11 +10,12 @@ import { useTranslations } from 'next-intl';
 import { createContactMessage } from '@/actions/contact/set';
 import { createOtp, resendOtp, verifyOtp } from '@/actions/contact/otp';
 import Image from 'next/image';
+import Loading from '@/components/myui/loading';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', phone: "", subject: "", message: '' });
     const t = useTranslations();
-    const [contactId, setContactId] = useState<string | null>(null)
     const [showDialog, setShowDialog] = useState(false)
     const [code, setCode] = useState("")
     const [loading, setLoading] = useState(false) // 👈 état loading
@@ -23,26 +24,42 @@ const Contact = () => {
         e.preventDefault()
         setLoading(true) // démarrer loading
         try {
-            const result = await createContactMessage(formData) // doit retourner {id, email}
+            const result = await createOtp(formData.email)
 
             if (result.status !== 200) {
-                console.error("Erreur lors de l'envoi du message")
+                toast.error(t('Error.title'))
                 setLoading(false)
                 return
             }
-
-            const contact = result.data
-            setContactId(contact.id)
-
-            // Création OTP
-            await createOtp(contact.id, contact.email)
-
             setShowDialog(true)
         } catch (err) {
             console.error(err)
         } finally {
             setLoading(false) // arrêter loading
         }
+    }
+
+    const handleVerified = async () => {
+        if (formData.email && code) {
+            const res = await verifyOtp(formData.email, code)
+            if (res.status === 200) {
+                const contact = await createContactMessage(formData)
+                if (contact.status !== 200) {
+                    toast.error(contact.data.errors[0].message)
+                } else {
+                    toast("Verified ✅")
+                }
+                setFormData({ name: '', email: '', phone: "", subject: "", message: '' })
+                setShowDialog(false)
+            } else {
+                toast(res.message)
+            }
+        }
+    }
+
+    const handleResent=async () => {
+        if (formData.email) await resendOtp(formData.email)
+        toast("Nouveau code envoyé ✅")
     }
 
     return (
@@ -135,7 +152,11 @@ const Contact = () => {
                                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-shadow text-white 
                                     ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-blue-600 to-orange-500 hover:shadow-lg"}`}
                             >
-                                {loading ? "Envoi..." : t('contact.send')}
+                                {loading ?
+                                    <div className='w-full flex justify-center items-center'>
+                                        <Loading></Loading>
+                                    </div>
+                                    : t('contact.send')}
                             </motion.button>
                         </form>
                     </motion.div>
@@ -165,27 +186,13 @@ const Contact = () => {
                             placeholder="Entrez le code reçu"
                         />
                         <button
-                            onClick={async () => {
-                                if (contactId) {
-                                    const res = await verifyOtp(contactId, code)
-                                    if (res.status === 200) {
-                                        alert("Verified ✅")
-                                        setFormData({ name: '', email: '', phone: "", subject: "", message: '' })
-                                        setShowDialog(false)
-                                    } else {
-                                        alert(res.message)
-                                    }
-                                }
-                            }}
+                            onClick={handleVerified}
                             className="bg-blue-600 text-white px-4 py-2 rounded mr-2"
                         >
                             Vérifier
                         </button>
                         <button
-                            onClick={async () => {
-                                if (contactId) await resendOtp(contactId)
-                                alert("Nouveau code envoyé ✅")
-                            }}
+                            onClick={handleResent}
                             className="text-blue-600 underline"
                         >
                             Renvoyer le code
