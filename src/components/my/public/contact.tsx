@@ -195,7 +195,6 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <div className="font-medium text-gray-900">{t('footer.email')}</div>
-                                        <div className="text-gray-600">contact@iatf2025.dz</div>
                                     </div>
                                 </div>
 
