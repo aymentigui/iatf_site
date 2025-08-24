@@ -62,7 +62,7 @@ export default function Home() {
       <Services />
 
       {/* Sectors Section */}
-      <Secteurs />
+      {/* <Secteurs /> */}
 
       {/* Hotels & Restaurants Section */}
      <HotelsAndRestaurants ></HotelsAndRestaurants>
