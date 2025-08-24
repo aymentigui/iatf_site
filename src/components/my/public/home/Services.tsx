@@ -91,13 +91,13 @@ const Services = () => {
                       {service.title}
                     </h3>
                     <p className="text-sm text-muted-foreground">{service.description}</p>
-                    <Button
+                    {/* <Button
                       variant="outline"
                       size="sm"
                       className="mt-2 group-hover:border-primary group-hover:text-primary bg-transparent"
                     >
                       {service.action}
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </div>
