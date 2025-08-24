@@ -48,27 +48,6 @@ const KeySectors = () => {
           ))}
         </div>
 
-        {/* Youth Startups Section */}
-        <div className="bg-blue-50 rounded-2xl p-8 md:p-10 border border-blue-100">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center mb-6 md:mb-0">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
-                <Rocket className="h-8 w-8 text-blue-600" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {t('youthStartups')}
-                </h3>
-                <p className="text-gray-700 mt-1">
-                  Empowering the next generation of African entrepreneurs
-                </p>
-              </div>
-            </div>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
