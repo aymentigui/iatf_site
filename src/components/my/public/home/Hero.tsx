@@ -9,7 +9,7 @@ const Hero = () => {
     const t = useTranslations();
 
     return (
-        <section className="relative bg-gradient-to-br from-blue-50 to-orange-50">
+        <section className="relative bg-gradient-to-br from-blue-50 to-orange-50 lg:p-40">
 
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
