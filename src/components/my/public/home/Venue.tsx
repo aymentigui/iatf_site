@@ -10,6 +10,12 @@ const Venue = () => {
 
     return (
         <>
+
+            <section>
+                <div style={{ height: '450px', position: 'relative' }}>
+                    <CircularGallery bend={3} textColor="#000000FF" borderRadius={0.05} scrollEase={0.02} />
+                </div>
+            </section>
             <section className="bg-white">
                 {/* <div className="container mx-auto px-4">
           <motion.div
@@ -35,11 +41,6 @@ const Venue = () => {
                     </div>
                 </div>
 
-            </section>
-            <section>
-                <div style={{ height: '450px', position: 'relative' }}>
-                    <CircularGallery bend={3} textColor="#000000FF" borderRadius={0.05} scrollEase={0.02} />
-                </div>
             </section>
         </>
     )
