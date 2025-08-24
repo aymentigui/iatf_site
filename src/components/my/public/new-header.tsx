@@ -48,9 +48,9 @@ const NewHeader = () => {
                         <a href="/" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('Header.home')}
                         </a>
-                        <a href="/hotels" className="hover:text-blue-300 mx-2 transition-colors">
+                        {/* <a href="/hotels" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('header.hotels')}
-                        </a>
+                        </a> */}
                         <a href="/contact" className="hover:text-blue-300 mx-2 transition-colors">
                             {t('contact.title')}
                         </a>
@@ -115,13 +115,13 @@ const NewHeader = () => {
                                 >
                                     {t('Header.home')}
                                 </a>
-                                <a
+                                {/* <a
                                     href="/hotels"
                                     className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('header.hotels')}
-                                </a>
+                                </a> */}
                                 <a
                                     href="/contact"
                                     className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
