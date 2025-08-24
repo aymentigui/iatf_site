@@ -3,6 +3,7 @@ import { verifySession } from "@/actions/permissions";
 import { prisma } from "@/lib/db";
 import { getTranslations } from "next-intl/server";
 import { z } from "zod";
+import { sendConfirmationMessage } from "../email";
 
 export async function createContactMessage(data: any): Promise<{ status: number; data: any }> {
     const e = await getTranslations("Error")
@@ -43,6 +44,14 @@ export async function createContactMessage(data: any): Promise<{ status: number;
                 }
             }
         )
+
+        await sendConfirmationMessage({
+            email,
+            name,
+            subject,
+            phone,
+            message
+        })
 
         return { status: 200, data: contact }
     } catch (error) {

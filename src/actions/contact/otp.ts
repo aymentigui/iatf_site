@@ -1,7 +1,7 @@
 "use server"
 
 import { prisma } from "@/lib/db"
-import { sendEmail } from "../email"
+import { sendEmail, sendOptCode } from "../email"
 
 
 function generateCode(length: number = 6) {
@@ -27,11 +27,10 @@ export async function createOtp(email: string) {
     })
 
     // Envoi email
-    await sendEmail(
+    await sendOptCode({
         email,
-        "Votre code de vérification",
-        `Votre code est ${code}. Il expire dans 5 minutes.`,
-    )
+        code
+    })
 
     return { status: 200, message: "Code envoyé" }
 }
@@ -69,3 +68,4 @@ export async function resendOtp(email: string) {
     const result = await createOtp(email)
     return result
 }
+

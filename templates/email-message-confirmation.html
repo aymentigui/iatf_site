@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Message Confirmation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f8fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      background-color: #1e73be;
+      color: #ffffff;
+      text-align: center;
+      padding: 24px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .content {
+      padding: 32px 24px;
+      color: #333333;
+    }
+    .content h2 {
+      font-size: 20px;
+      color: #1e73be;
+      margin-bottom: 12px;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 12px 0;
+    }
+    .message-box {
+      margin: 20px 0;
+      padding: 16px;
+      border-left: 4px solid #1e73be;
+      background-color: #f0f6fc;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #444;
+    }
+    .footer {
+      background-color: #f5f8fa;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #777777;
+    }
+    a {
+      color: #1e73be;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Message Received</h1>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <h2>Hello {{name}},</h2>
+      <p>We have successfully received your message. Thank you for reaching out to us!</p>
+
+      <div class="message-box">
+        <strong>Subject:</strong> {{subject}}<br/>
+        <strong>Email:</strong> {{email}}<br/>
+        <strong>Phone:</strong> {{phone}}<br/><br/>
+        <strong>Your Message:</strong><br/>
+        {{message}}
+      </div>
+
+      <p>Our team will review your request and get back to you as soon as possible.  
+      Please allow some time for us to process your inquiry.</p>
+
+      <p>If this message was not sent by you, you can safely ignore this email.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Best regards,<br/>The Support Team</p>
+      <p>&copy; {{year}} IATF-ALGERIA. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

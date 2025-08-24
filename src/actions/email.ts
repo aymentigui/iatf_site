@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
     },
 })
 
-const getEmailTemplate = async (templateName: string): Promise<string> => {
+export const getEmailTemplate = async (templateName: string): Promise<string> => {
     try {
         const templatePath = path.join(process.cwd(), 'templates', `${templateName}.html`);
         return await fs.readFile(templatePath, 'utf-8');
@@ -84,6 +84,58 @@ export async function send2FACode(data: any): Promise<{ status: number; message:
         return { status: 200, message: 'Email envoyé avec succès' };
     } catch (error) {
         console.error('Erreur lors de l\'envoi de l\'email de code:', error);
+        return { status: 500, message: `Erreur: ${(error as Error).message}` };
+    }
+}
+
+
+export async function sendOptCode(data: any): Promise<{ status: number; message: string }> {
+    try {
+        const template = await getEmailTemplate('email-otp');
+
+        const html = replaceTemplateVariables(template, {
+            email: data.email,
+            code: data.code,
+        });
+
+
+        await sendEmail(
+            data.email,
+            "Your verification code",
+            html,
+        )
+
+        return { status: 200, message: 'Email envoyé avec succès' };
+    } catch (error) {
+        console.error('Erreur lors de l\'envoi de l\'email de otp:', error);
+        return { status: 500, message: `Erreur: ${(error as Error).message}` };
+    }
+}
+
+
+
+export async function sendConfirmationMessage(data: any): Promise<{ status: number; message: string }> {
+    try {
+        const template = await getEmailTemplate('email-message-confirmation');
+
+        const html = replaceTemplateVariables(template, {
+            email: data.email,
+            name: data.name,
+            subject: data.subject,
+            phone: data.phone,
+            message:data.message
+        });
+
+
+        await sendEmail(
+            data.email,
+            "Your message has been sent",
+            html,
+        )
+
+        return { status: 200, message: 'Email envoyé avec succès' };
+    } catch (error) {
+        console.error('Erreur lors de l\'envoi de l\'email de confermation message:', error);
         return { status: 500, message: `Erreur: ${(error as Error).message}` };
     }
 }

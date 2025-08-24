@@ -51,7 +51,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
       <CarouselSection />
-      <IATFObjectives />
+      {/* <IATFObjectives /> */}
       {/* Venue Section */}
       {/* <KeySectors /> */}
       <Venue />
@@ -65,7 +65,7 @@ export default function Home() {
       <Secteurs />
 
       {/* Hotels & Restaurants Section */}
-     <HotelsAndRestaurants ></HotelsAndRestaurants>
+     {/* <HotelsAndRestaurants ></HotelsAndRestaurants> */}
 
       <section className="w-full p-8 lg:p-20 h-[250px] lg:h-[550px]">
         <Image className="w-full h-full object-contain" src="/iatf_image.jpeg" alt="IATF_2025" width={600} height={600}></Image>
