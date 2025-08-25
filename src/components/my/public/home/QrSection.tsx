@@ -33,7 +33,7 @@ const QrSection = () => {
                 {/* QR Code */}
                 <div className="flex justify-center items-center">
                     <Image
-                        src="/qr-odiro.png" // mets ton image QR code ici dans public/
+                        src="/qr_odiro.png" // mets ton image QR code ici dans public/
                         alt="QR Code"
                         width={220}
                         height={220}
