@@ -33,7 +33,7 @@ const Hero = () => {
                             whileTap={{ scale: 0.95 }}
                             className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow"
                         >
-                            {t('contact.form')}
+                            <a href="#contact">{t('contact.form')}</a>
                         </motion.button>
                     </motion.div>
 
