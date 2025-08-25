@@ -217,25 +217,25 @@ const Contact = () => {
             {showDialog && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black/50">
                     <div className="bg-white p-6 rounded-xl w-96">
-                        <h2 className="text-lg font-bold mb-4">Vérification email</h2>
+                        <h2 className="text-lg font-bold mb-4">{t("busRequest.verifyTitle")}</h2>
                         <input
                             type="text"
                             value={code}
                             onChange={(e) => setCode(e.target.value)}
                             className="w-full border rounded p-2 mb-4"
-                            placeholder="Entrez le code reçu"
+                            placeholder={t("busRequest.verifyPlaceholder")}
                         />
                         <button
                             onClick={handleVerified}
                             className="bg-blue-600 text-white px-4 py-2 rounded mr-2"
                         >
-                            Vérifier
+                             {t("busRequest.verifyButton")}
                         </button>
                         <button
                             onClick={handleResent}
                             className="text-blue-600 underline"
                         >
-                            Renvoyer le code
+                            {t("busRequest.resendCode")}
                         </button>
                     </div>
                 </div>

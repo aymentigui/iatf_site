@@ -301,7 +301,7 @@ model contact {
   created_at  DateTime      @default(now())
   updated_at  DateTime      @updatedAt
   is_read     Boolean       @default(false)
-  verified    Boolean       @default(false)
+  verified    Boolean       @default(true)
   Contact_otp Contact_otp[]
 }
 
@@ -316,4 +316,17 @@ model Contact_otp {
   // Relation avec ContactMessage
   contact_id String?
   contact    contact? @relation(fields: [contact_id], references: [id], onDelete: Cascade)
+}
+
+model bus_request {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  phone      String?
+  urgence    String?
+  country    String?
+  hotel      String?
+  viewed     Boolean  @default(false)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }

@@ -37,11 +37,11 @@ export const { handlers, auth, signIn, signOut } =
             // @ts-ignore
             const existDevice = await findExistingSession(user.id, user.deviceName || 'Unknown', user.deviceType || 'Unknown', `${user.browserName} ${user.browserVersion}`, `${user.osName} ${deviceInfo.os.version}`);
 
-            if (existDevice) {
-              await prisma.session.delete({
-                where: { id: existDevice.id, },
-              })
-            }
+            // if (existDevice) {
+            //   await prisma.session.delete({
+            //     where: { id: existDevice.id, },
+            //   })
+            // }
             // @ts-ignore
             const session = await createNewSession(user.id, tokenSession, user.deviceName || 'Unknown', user.deviceType || 'Unknown', `${user.browserName} ${user.browserVersion}`, `${user.osName} ${deviceInfo.os.version}`);
             // @ts-ignore

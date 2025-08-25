@@ -15,9 +15,6 @@ export async function getContactMessages(): Promise<{ status: number; data: any 
 
     const [messages, total] = await Promise.all([
       prisma.contact.findMany({
-        where:{
-          verified: true,
-        }
       }),
       prisma.restaurant.count(),
     ])
@@ -31,6 +28,35 @@ export async function getContactMessages(): Promise<{ status: number; data: any 
     }
   } catch (error) {
     console.error("An error occurred in getmessages:", error)
+    return { status: 500, data: { message: e("error") } }
+  }
+}
+
+
+export async function getBusRequest(): Promise<{ status: number; data: any }> {
+  const e = await getTranslations("Error")
+
+  try {
+    const session = await verifySession()
+    if (!session?.data?.user) {
+      return { status: 401, data: { message: e("unauthorized") } }
+    }
+
+    const [messages, total] = await Promise.all([
+      prisma.bus_request.findMany({
+      }),
+      prisma.restaurant.count(),
+    ])
+
+    return {
+      status: 200,
+      data: {
+        messages: messages,
+        total,
+      },
+    }
+  } catch (error) {
+    console.error("An error occurred in getBusRequest:", error)
     return { status: 500, data: { message: e("error") } }
   }
 }

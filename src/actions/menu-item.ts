@@ -50,6 +50,13 @@ const itemsMenu = async () =>{
             permissions: [""],
         },
         {
+            title: "Bus Request",
+            url: "/admin/bus_request",
+            icon: UserRoundCog,
+            admin: false,
+            permissions: [""],
+        },
+        {
             title: Menu("files"),
             url: "/admin/files",
             icon: File,
