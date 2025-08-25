@@ -14,6 +14,7 @@ import CarouselSection from "@/components/my/public/home/CarouselSection";
 import { WeatherInfo } from "@/components/my/public/liens/WeatherInfo";
 
 import type { Metadata } from "next";
+import QrSection from "@/components/my/public/home/QrSection";
 
 export const metadata: Metadata = {
   title: "Intra-African Trade Fair 2025 | IATF 2025",
@@ -63,6 +64,7 @@ export default function Home() {
 
       {/* Sectors Section */}
       <Secteurs />
+      <QrSection />
 
       {/* Hotels & Restaurants Section */}
      {/* <HotelsAndRestaurants ></HotelsAndRestaurants> */}

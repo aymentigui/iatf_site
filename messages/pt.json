@@ -383,8 +383,8 @@
         "links": "Useful Links",
         "name": "Name",
         "email": "Email",
-        "phone":"Número de telefone",
-        "subject":"assunto",
+        "phone": "Número de telefone",
+        "subject": "assunto",
         "message": "Message",
         "send": "Send"
     },
@@ -833,5 +833,10 @@
                 "description": "Veículos modernos e climatizados"
             }
         }
+    },
+    "qr": {
+        "title": "Escaneie o código QR",
+        "description": "Escaneie o código QR para acessar o site e baixar o aplicativo que permite visualizar o planejamento de transporte.",
+        "button": "Ir para o site"
     }
 }

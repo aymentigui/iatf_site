@@ -833,5 +833,10 @@
                 "description": "Véhicules modernes et climatisés"
             }
         }
+    },
+    "qr": {
+        "title": "Scannez le code QR",
+        "description": "Scannez le code QR pour accéder au site et télécharger l'application qui vous permet de voir la planification de transport.",
+        "button": "Accéder au site"
     }
 }

@@ -382,8 +382,8 @@
         "form": "Formulario de Contacto",
         "links": "Enlaces Útiles",
         "name": "Nombre",
-        "phone":"Número de teléfono",
-        "subject":"Sujeta",
+        "phone": "Número de teléfono",
+        "subject": "Sujeta",
         "email": "Correo electrónico",
         "message": "Mensaje",
         "send": "Enviar"
@@ -833,5 +833,10 @@
                 "description": "Vehículos modernos y climatizados"
             }
         }
+    },
+    "qr": {
+        "title": "Escanea el código QR",
+        "description": "Escanea el código QR para acceder al sitio y descargar la aplicación que te permite ver la planificación del transporte.",
+        "button": "Ir al sitio"
     }
 }
