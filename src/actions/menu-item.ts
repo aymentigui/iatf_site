@@ -40,14 +40,14 @@ const itemsMenu = async () =>{
             url: "/admin/hotels",
             icon: UserRoundCog,
             admin: false,
-            permissions: [""],
+            permissions: [],
         },
         {
             title: "messages",
             url: "/admin/messages",
             icon: UserRoundCog,
             admin: false,
-            permissions: [""],
+            permissions: [],
         },
         {
             title: "Bus Request",

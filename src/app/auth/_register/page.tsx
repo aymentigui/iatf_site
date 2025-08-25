@@ -1,4 +1,4 @@
-import RegisterForm from "@/app/auth/register/register";
+import RegisterForm from "@/app/auth/_register/register";
 import { getTranslations } from "next-intl/server";
 
 export default async function RegisterPage() {
