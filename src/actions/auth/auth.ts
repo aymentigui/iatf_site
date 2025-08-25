@@ -60,15 +60,16 @@ export async function registerUser(data: any): Promise<{ status: number, data: a
 
         const passwordHash = await bcrypt.hash(password, 10);
 
-        const newUser = await prisma.user.create({
-            data: {
-                firstname,
-                lastname,
-                username,
-                email,
-                password: passwordHash, // Note: In a real application, make sure to hash the password before storing it
-            },
-        });
+        const newUser = null;
+        // await prisma.user.create({
+        //     data: {
+        //         firstname,
+        //         lastname,
+        //         username,
+        //         email,
+        //         password: passwordHash, // Note: In a real application, make sure to hash the password before storing it
+        //     },
+        // });
         //console.log('User created successfully');
         return { status: 201, data: newUser };
     } catch (error) {
