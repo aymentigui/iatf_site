@@ -147,7 +147,7 @@ const LoginForm = () => {
                     />
                 </>}
                 <div className='flex justify-between items-center'>
-                    <Button variant='link' type='button' onClick={passwordForget} className='p-0'>{t("forgetpassword")}</Button>
+                    {/* <Button variant='link' type='button' onClick={passwordForget} className='p-0'>{t("forgetpassword")}</Button> */}
                     <Button variant='link' type='button' onClick={resendTheCode} className='p-0'>{s("resendthecode")}</Button>
                 </div>
                 <div className='pt-4'>
@@ -155,7 +155,7 @@ const LoginForm = () => {
                         disabled={loading} className={cn('font-bold w-full ', loading && 'cursor-wait')} type="submit">{twoFactorConfermation ? s("confirm") : s("login")}</Button>
                 </div>
             </form>
-            <Button variant='link' type='button' onClick={() => router.push("/auth/register")} className='p-0 mt-2 '>{t("youhavenotaccount")}</Button>
+            {/* <Button variant='link' type='button' onClick={() => router.push("/auth/register")} className='p-0 mt-2 '>{t("youhavenotaccount")}</Button> */}
         </Form>
     )
 }
