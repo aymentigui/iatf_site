@@ -21,7 +21,7 @@ const QrSection = () => {
                     </h2>
                     <p className="text-lg text-gray-700 mb-6">{t("description")}</p>
                     <a
-                        href="https://odiro-dz.com/atms/public"
+                        href="https://odiro-dz.com/tfa/public"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-blue-700 text-white rounded-xl shadow-lg hover:bg-blue-800 transition"
@@ -33,7 +33,7 @@ const QrSection = () => {
                 {/* QR Code */}
                 <div className="flex justify-center items-center">
                     <Image
-                        src="/qr_odiro.png" // mets ton image QR code ici dans public/
+                        src="/qr_odiro_tfa.png" // mets ton image QR code ici dans public/
                         alt="QR Code"
                         width={220}
                         height={220}
