@@ -794,28 +794,48 @@
             "title": "Organisation de la Station",
             "subtitle": "Organisé par zones pour des départs fluides",
             "zonesTitle": "Répartition des Zones",
-            "zonesDescription": "La station est divisée en quatre zones géographiques :",
+            "zonesDescription": "La station est divisée en sept zones :",
             "platform": "Quai",
+            "hotels": "hôtels",
+            "buses": "bus",
             "activeZone": "Zone active - Plateformes dédiées et supervisées",
             "note": "Chaque zone dispose de plateformes dédiées, clairement identifiées et supervisées par notre équipe de support.",
             "zones": {
-                "est": {
-                    "name": "Zone Est",
-                    "description": "Hôtels situés à l'est d'Alger (Quai 1 - 32)"
+                "zone1": {
+                    "name": "Zone 1 (Centre)",
+                    "description": "Sidi M'Hamed & Bab El Oued"
                 },
-                "ouest": {
-                    "name": "Zone Ouest",
-                    "description": "Hôtels situés à l'ouest d'Alger (Quai 33 - 64)"
+                "zone2": {
+                    "name": "Zone 2 (Est)",
+                    "description": "Dar El Beïda, Bab Ezzouar, Baraki"
                 },
-                "centrale": {
-                    "name": "Zone Centrale",
-                    "description": "Hôtels au centre d'Alger (Quai 65 - 96)"
+                "zone3": {
+                    "name": "Zone 3 (Centre-Est)",
+                    "description": "Hussein Dey, El Harrach, El Mohammadia, Rouiba"
                 },
-                "h": {
-                    "name": "Zone H",
-                    "description": "Hôtels dans les wilayas de Blida, Boumerdès et Tipaza (Quai 97 - 128)"
+                "zone4": {
+                    "name": "Zone 4 (Ouest)",
+                    "description": "Chéraga, Draria, Bouzaréah"
+                },
+                "zone5": {
+                    "name": "Zone 5 (Sud/Extérieur)",
+                    "description": "Bir Mourad Rais, Zéralda, Tessala El Merdja, Douira, Bilda, Tipaza, Boumerdès"
+                },
+                "zone6": {
+                    "name": "Zone 6 (Aéroport)",
+                    "description": "Houari Boumediene"
+                },
+                "zone7": {
+                    "name": "Zone 7",
+                    "description": "Zone de stockage ARDIS - Station des bus SAFEX"
                 }
             }
+        },
+        "map": {
+            "title": "Carte des Zones",
+            "subtitle": "Localisation géographique de toutes les zones",
+            "note": "Carte interactive montrant l’emplacement des différentes zones.",
+            "viewLarger": "Voir la carte en grand"
         },
         "transport": {
             "title": "Transport des Invités",

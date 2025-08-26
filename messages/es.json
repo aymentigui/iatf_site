@@ -792,30 +792,50 @@
         },
         "station": {
             "title": "Organización de la Estación",
-            "subtitle": "Organizado por zonas para salidas fluidas",
+            "subtitle": "Organizada por zonas para salidas fluidas",
             "zonesTitle": "Distribución de Zonas",
-            "zonesDescription": "La estación está dividida en cuatro zonas geográficas:",
+            "zonesDescription": "La estación está dividida en siete zonas:",
             "platform": "Andén",
-            "activeZone": "Zona activa - Plataformas dedicadas y supervisadas",
-            "note": "Cada zona dispone de plataformas dedicadas, claramente identificadas y supervisadas por nuestro equipo de soporte.",
+            "hotels": "Hoteles",
+            "buses": "Autobuses",
+            "activeZone": "Zona activa - Andenes dedicados y supervisados",
+            "note": "Cada zona cuenta con andenes dedicados, claramente identificados y supervisados por nuestro equipo de apoyo.",
             "zones": {
-                "est": {
-                    "name": "Zona Este",
-                    "description": "Hoteles situados al este de Argel (Andén 1 - 32)"
+                "zone1": {
+                    "name": "Zona 1 (Centro)",
+                    "description": "Sidi M'Hamed & Bab El Oued"
                 },
-                "ouest": {
-                    "name": "Zona Oeste",
-                    "description": "Hoteles situados al oeste de Argel (Andén 33 - 64)"
+                "zone2": {
+                    "name": "Zona 2 (Este)",
+                    "description": "Dar El Beïda, Bab Ezzouar, Baraki"
                 },
-                "centrale": {
-                    "name": "Zona Central",
-                    "description": "Hoteles en el centro de Argel (Andén 65 - 96)"
+                "zone3": {
+                    "name": "Zona 3 (Centro-Este)",
+                    "description": "Hussein Dey, El Harrach, El Mohammadia, Rouiba"
                 },
-                "h": {
-                    "name": "Zona H",
-                    "description": "Hoteles en las wilayas de Blida, Boumerdès y Tipaza (Andén 97 - 128)"
+                "zone4": {
+                    "name": "Zona 4 (Oeste)",
+                    "description": "Chéraga, Draria, Bouzaréah"
+                },
+                "zone5": {
+                    "name": "Zona 5 (Sur/Periferia)",
+                    "description": "Bir Mourad Rais, Zéralda, Tessala El Merdja, Douira, Bilda, Tipaza, Boumerdès"
+                },
+                "zone6": {
+                    "name": "Zona 6 (Aeropuerto)",
+                    "description": "Houari Boumediene"
+                },
+                "zone7": {
+                    "name": "Zona 7",
+                    "description": "Área de almacenamiento ARDIS - Estación de autobuses SAFEX"
                 }
             }
+        },
+        "map": {
+            "title": "Mapa de Zonas",
+            "subtitle": "Ubicación geográfica de todas las zonas",
+            "note": "Mapa interactivo que muestra la ubicación de las diferentes zonas.",
+            "viewLarger": "Ver mapa más grande"
         },
         "transport": {
             "title": "Transporte de Invitados",
