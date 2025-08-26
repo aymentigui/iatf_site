@@ -291,7 +291,7 @@ const Services = () => {
             <p className="text-sm text-muted-foreground">{t("station.zonesDescription")}</p>
           </div>
 
-          <div className="space-y-3 grid grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-3 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {zones2.map((zone, index) => (
               <div
                 key={zone.id}
