@@ -124,11 +124,86 @@ const Services = () => {
     },
   ]
 
+
+  const zones2 = [
+    {
+      id: "zone1",
+      name: t("station.zones.zone1.name"),
+      description: t("station.zones.zone1.description"),
+      color: "bg-red-500",
+      quais: "1-24",
+      hotels: 20,
+      buses: 120,
+      coordinates: [36.7763, 3.0585] // Coordinates for Sidi M'Hamed & Bab El Oued
+    },
+    {
+      id: "zone2",
+      name: t("station.zones.zone2.name"),
+      description: t("station.zones.zone2.description"),
+      color: "bg-orange-500",
+      quais: "25-64",
+      hotels: 37,
+      buses: 222,
+      coordinates: [36.7128, 3.1755] // Coordinates for Dar El Beïda, Bab Ezzouar, Baraki
+    },
+    {
+      id: "zone3",
+      name: t("station.zones.zone3.name"),
+      description: t("station.zones.zone3.description"),
+      color: "bg-amber-500",
+      quais: "69-84",
+      hotels: 13,
+      buses: 78,
+      coordinates: [36.7375, 3.1333] // Coordinates for Hussein Dey, El Harrach, El Mohammadia, Rouiba
+    },
+    {
+      id: "zone4",
+      name: t("station.zones.zone4.name"),
+      description: t("station.zones.zone4.description"),
+      color: "bg-green-500",
+      quais: "85-112",
+      hotels: 27,
+      buses: 162,
+      coordinates: [36.7642, 2.9594] // Coordinates for Chéraga, Draria, Bouzaréah
+    },
+    {
+      id: "zone5",
+      name: t("station.zones.zone5.name"),
+      description: t("station.zones.zone5.description"),
+      color: "bg-blue-500",
+      quais: "113-139",
+      hotels: 47,
+      buses: 246,
+      coordinates: [36.5966, 2.8104] // Coordinates for Bir Mourad Rais, Zéralda, Tessala El Merdja, Douira, Blida, Tipaza, Boumerdès
+    },
+    {
+      id: "zone6",
+      name: t("station.zones.zone6.name"),
+      description: t("station.zones.zone6.description"),
+      color: "bg-purple-500",
+      quais: "",
+      hotels: 0,
+      buses: 0,
+      coordinates: [36.6910, 3.2154] // Coordinates for Houari Boumediene Airport
+    },
+    {
+      id: "zone7",
+      name: t("station.zones.zone7.name"),
+      description: t("station.zones.zone7.description"),
+      color: "bg-pink-500",
+      quais: "",
+      hotels: 0,
+      buses: 0,
+      coordinates: [36.7325, 3.0864] // Coordinates for ARDIS storage area and SAFEX bus station
+    },
+  ]
+
   const [activeZone, setActiveZone] = useState<any>(null)
 
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white lg:p-40">
       <div className="grid lg:grid-cols-2 gap-8 mb-10">
+        {/* Support et Assistance */}
         {/* Support et Assistance */}
         <Card className="animate-fade-in-scale hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
           <CardHeader className="text-center pb-6">
@@ -161,103 +236,113 @@ const Services = () => {
           </CardContent>
         </Card>
 
-        {/* Organisation de la Station */}
-        <Card className="animate-fade-in-scale hover:shadow-xl transition-all duration-300 border-2 hover:border-secondary/20">
-          <CardHeader className="text-center pb-6">
-            <div className="mx-auto w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
-              <Navigation className="w-8 h-8 text-black" />
+        {/* Transport des Invités */}
+        <Card className="animate-fade-in-scale border-2 hover:border-accent/20 hover:shadow-xl transition-all duration-300">
+          <CardHeader className="text-center">
+            <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <Bus className="w-8 h-8 text-primary" />
             </div>
-            <CardTitle className="text-2xl text-black font-bold">{t("station.title")}</CardTitle>
-            <CardDescription className="text-base">{t("station.subtitle")}</CardDescription>
+            <CardTitle className="text-3xl text-black font-black">{t("transport.title")}</CardTitle>
+            <CardDescription className="text-lg">{t("transport.subtitle")}</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="space-y-2">
-              <h3 className="font-semibold text-foreground flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-black" />
-                {t("station.zonesTitle")}
-              </h3>
-              <p className="text-sm text-muted-foreground">{t("station.zonesDescription")}</p>
-            </div>
-
-            <div className="space-y-3">
-              {zones.map((zone, index) => (
-                <div
-                  key={zone.id}
-                  className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 ${
-                    activeZone === zone.id
-                      ? "border-secondary shadow-lg scale-105 animate-pulse-glow"
-                      : "border-border hover:border-secondary/50 hover:shadow-md"
-                  }`}
-                  onClick={() => setActiveZone(activeZone === zone.id ? null : zone.id)}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`w-4 h-4 rounded-full ${zone.color}`} />
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-semibold text-foreground">{zone.name}</h4>
-                        <span className="text-xs">{t("station.platform")} {zone.quais}</span>
-                      </div>
-                      <p className="text-sm text-muted-foreground mt-1">{zone.description}</p>
-                    </div>
-                    <Bus className="w-5 h-5 text-muted-foreground" />
-                  </div>
-
-                  {activeZone === zone.id && (
-                    <div className="mt-4 pt-4 border-t border-border animate-slide-in-up">
-                      <div className="flex items-center gap-2 text-sm text-black">
-                        <AlertCircle className="w-4 h-4" />
-                        <span>{t("station.activeZone")}</span>
-                      </div>
-                    </div>
-                  )}
+          <CardContent className="text-center">
+            <div className="grid md:grid-cols-3 gap-6 mt-6">
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                  <Clock className="w-6 h-6 text-primary" />
                 </div>
-              ))}
-            </div>
-
-            <div className="p-4 bg-muted/50 rounded-lg border border-border">
-              <p className="text-sm text-muted-foreground">{t("station.note")}</p>
+                <h3 className="font-semibold">{t("transport.punctuality.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("transport.punctuality.description")}</p>
+              </div>
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold">{t("transport.coverage.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("transport.coverage.description")}</p>
+              </div>
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold">{t("transport.comfort.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("transport.comfort.description")}</p>
+              </div>
             </div>
           </CardContent>
         </Card>
       </div>
 
-      {/* Transport des Invités */}
-      <Card className="animate-fade-in-scale border-2 hover:border-accent/20 hover:shadow-xl transition-all duration-300 mb-10">
-        <CardHeader className="text-center">
-          <div className="mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-            <Bus className="w-8 h-8 text-accent" />
+      {/* Organisation de la Station */}
+      <Card className="animate-fade-in-scale hover:shadow-xl transition-all duration-300 border-2 hover:border-secondary/20 mb-10">
+        <CardHeader className="text-center pb-6">
+          <div className="mx-auto w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+            <Navigation className="w-8 h-8 text-black" />
           </div>
-          <CardTitle className="text-3xl text-black font-black">{t("transport.title")}</CardTitle>
-          <CardDescription className="text-lg">{t("transport.subtitle")}</CardDescription>
+          <CardTitle className="text-2xl text-black font-bold">{t("station.title")}</CardTitle>
+          <CardDescription className="text-base">{t("station.subtitle")}</CardDescription>
         </CardHeader>
-        <CardContent className="text-center">
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            <div className="space-y-2">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
-                <Clock className="w-6 h-6 text-primary" />
+        <CardContent className="space-y-6">
+          <div className="space-y-2">
+            <h3 className="font-semibold text-foreground flex items-center gap-2">
+              <MapPin className="w-5 h-5 text-black" />
+              {t("station.zonesTitle")}
+            </h3>
+            <p className="text-sm text-muted-foreground">{t("station.zonesDescription")}</p>
+          </div>
+
+          <div className="space-y-3">
+            {zones2.map((zone, index) => (
+              <div
+                key={zone.id}
+                className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 ${activeZone === zone.id
+                  ? "border-secondary shadow-lg scale-105 animate-pulse-glow"
+                  : "border-border hover:border-secondary/50 hover:shadow-md"
+                  }`}
+                onClick={() => setActiveZone(activeZone === zone.id ? null : zone.id)}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`w-4 h-4 rounded-full ${zone.color}`} />
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between">
+                      <h4 className="font-semibold text-foreground">{zone.name}</h4>
+                      {zone.quais && (
+                        <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                          {t("station.platform")} {zone.quais}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-1">{zone.description}</p>
+                    <div className="flex gap-4 mt-2 text-xs text-muted-foreground">
+                      {zone.hotels > 0 && (
+                        <span>{zone.hotels} {t("station.hotels")}</span>
+                      )}
+                      {zone.buses > 0 && (
+                        <span>{zone.buses} {t("station.buses")}</span>
+                      )}
+                    </div>
+                  </div>
+                  <Bus className="w-5 h-5 text-muted-foreground" />
+                </div>
+
+                {activeZone === zone.id && (
+                  <div className="mt-4 pt-4 border-t border-border animate-slide-in-up">
+                    <div className="flex items-center gap-2 text-sm text-black">
+                      <AlertCircle className="w-4 h-4" />
+                      <span>{t("station.activeZone")}</span>
+                    </div>
+                  </div>
+                )}
               </div>
-              <h3 className="font-semibold">{t("transport.punctuality.title")}</h3>
-              <p className="text-sm text-muted-foreground">{t("transport.punctuality.description")}</p>
-            </div>
-            <div className="space-y-2">
-              <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto">
-                <MapPin className="w-6 h-6 text-black" />
-              </div>
-              <h3 className="font-semibold">{t("transport.coverage.title")}</h3>
-              <p className="text-sm text-muted-foreground">{t("transport.coverage.description")}</p>
-            </div>
-            <div className="space-y-2">
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto">
-                <Users className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="font-semibold">{t("transport.comfort.title")}</h3>
-              <p className="text-sm text-muted-foreground">{t("transport.comfort.description")}</p>
-            </div>
+            ))}
+          </div>
+
+          <div className="p-4 bg-muted/50 rounded-lg border border-border">
+            <p className="text-sm text-muted-foreground">{t("station.note")}</p>
           </div>
         </CardContent>
       </Card>
-
       {/* Carte Interactive */}
       <Card className="animate-fade-in-scale border-2 hover:border-blue-500/20">
         <CardHeader className="text-center pb-6">
