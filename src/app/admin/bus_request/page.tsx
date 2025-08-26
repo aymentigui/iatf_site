@@ -54,8 +54,8 @@ export default function MessagesPage() {
               <TableHead>Email</TableHead>
               <TableHead>Urgence</TableHead>
               <TableHead>Hotel</TableHead>
+              <TableHead>Country</TableHead>
               <TableHead>Date</TableHead>
-              <TableHead>Action</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

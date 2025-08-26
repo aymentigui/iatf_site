@@ -133,7 +133,6 @@ const BusRequest = () => {
                                 value={formData.phone}
                                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                required
                             />
                         </div>
 
@@ -146,7 +145,6 @@ const BusRequest = () => {
                                 value={formData.urgence}
                                 onChange={(e) => setFormData({ ...formData, urgence: e.target.value })}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                required
                             >
                                 <option value="">------------</option>
                                 <option value="immediate">{t("busRequest.urgenceOptions.immediate")}</option>
@@ -165,7 +163,6 @@ const BusRequest = () => {
                                 value={formData.hotel}
                                 onChange={(e) => setFormData({ ...formData, hotel: e.target.value })}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                required
                             />
                         </div>
 
@@ -178,7 +175,6 @@ const BusRequest = () => {
                                 value={formData.country}
                                 onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                required
                             >
                                 <option value="">{t("busRequest.country")}</option>
                                 {africanCountriesKeys.map((key) => (
