@@ -194,7 +194,7 @@ const Contact = () => {
                                 type="submit"
                                 disabled={loading} // 👈 désactivation bouton
                                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-shadow text-white 
-                                    ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-blue-600 to-orange-500 hover:shadow-lg"}`}
+                                        ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-blue-600 to-orange-500 hover:shadow-lg"}`}
                             >
                                 {loading ?
                                     <div className='w-full flex justify-center items-center'>
@@ -259,31 +259,64 @@ const Contact = () => {
 
             {/* Dialog OTP */}
             {showDialog && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black/50">
-                    <div className="bg-white p-6 rounded-xl w-96">
-                        <h2 className="text-lg font-bold mb-4">{t("busRequest.verifyTitle")}</h2>
-                        <input
-                            type="text"
-                            value={code}
-                            onChange={(e) => setCode(e.target.value)}
-                            className="w-full border rounded p-2 mb-4"
-                            placeholder={t("busRequest.verifyPlaceholder")}
-                        />
-                        <button
-                            onClick={handleVerified}
-                            className="bg-blue-600 text-white px-4 py-2 rounded mr-2"
-                        >
-                            {loading2
-                                ? <div className='w-full flex justify-center items-center'>
-                                    <Loading></Loading>
+                <div className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-50 transition-opacity duration-300">
+                    <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl w-full max-w-md mx-4 shadow-2xl border border-gray-100 transform transition-transform duration-300 scale-in">
+                        <div className="text-center mb-6">
+                            <div className="flex justify-center mb-4">
+                                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
                                 </div>
-                                : t("busRequest.verifyButton")}
-                        </button>
+                            </div>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-2">{t("busRequest.verifyTitle")}</h2>
+                            {/* <p className="text-gray-500">{t("busRequest.verifySubtitle")}</p> */}
+                        </div>
+
+                        <div className="mb-6">
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                {t("busRequest.verifyPlaceholder")}
+                            </label>
+                            <input
+                                type="text"
+                                value={code}
+                                onChange={(e) => setCode(e.target.value)}
+                                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                placeholder="XXXXXX"
+                            />
+                        </div>
+
+                        <div className="flex flex-col gap-3">
+                            <button
+                                onClick={handleVerified}
+                                disabled={loading2}
+                                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:transform-none disabled:hover:shadow-lg flex items-center justify-center"
+                            >
+                                {loading2 ? (
+                                    <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                ) : (
+                                    t("busRequest.verifyButton")
+                                )}
+                            </button>
+
+                            <button
+                                onClick={handleResent}
+                                className="text-blue-600 hover:text-blue-800 font-medium py-2 transition-colors duration-200 flex items-center justify-center gap-1"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                                {t("busRequest.resendCode")}
+                            </button>
+                        </div>
+
                         <button
-                            onClick={handleResent}
-                            className="text-blue-600 underline"
+                            onClick={() => setShowDialog(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200"
                         >
-                            {t("busRequest.resendCode")}
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
                         </button>
                     </div>
                 </div>
