@@ -3,7 +3,7 @@ import { verifySession } from "@/actions/permissions";
 import { prisma } from "@/lib/db";
 import { getTranslations } from "next-intl/server";
 import { z } from "zod";
-import { sendConfirmationMessage, sendEmail } from "../email";
+import { sendConfirmationBusRequest, sendConfirmationMessage, sendEmail } from "../email";
 
 export async function createContactMessage(data: any): Promise<{ status: number; data: any }> {
     const e = await getTranslations("Error")
@@ -134,14 +134,25 @@ export async function createBusRequest(data: any): Promise<{ status: number; dat
             }
         )
 
-        // await sendConfirmationMessage({
-        //     email,
-        //     name,
-        //     subject,
-        //     phone,
-        //     message
-        // })
+        await sendConfirmationBusRequest({
+            email,
+            name,
+            phone,
+            urgence,
+            hotel,
+            country
+        })
 
+        await sendConfirmationBusRequest({
+            email:"rima.kerirem@gmail.com",
+            name,
+            phone,
+            urgence,
+            hotel,
+            country
+        })
+
+        
         return { status: 200, data: contact }
     } catch (error) {
         console.error("An error occurred in createRestaurant:", error)

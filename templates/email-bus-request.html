@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
-  <title>Message Confirmation</title>
+  <title>Bus Request Confirmation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
@@ -70,26 +70,27 @@
   <div class="container">
     <!-- HEADER -->
     <div class="header">
-      <h1>Message Received</h1>
+      <h1>Bus Request Received</h1>
     </div>
 
     <!-- CONTENT -->
     <div class="content">
       <h2>Hello {{name}},</h2>
-      <p>We have successfully received your message. Thank you for reaching out to us!</p>
+      <p>We have successfully received your bus request. Thank you for contacting us!</p>
 
       <div class="message-box">
-        <strong>Subject:</strong> {{subject}}<br/>
+        <strong>Name:</strong> {{name}}<br/>
         <strong>Email:</strong> {{email}}<br/>
-        <strong>Phone:</strong> {{phone}}<br/><br/>
-        <strong>Your Message:</strong><br/>
-        {{message}}
+        <strong>Phone:</strong> {{phone}}<br/>
+        <strong>Urgence:</strong> {{urgence}}<br/>
+        <strong>Hotel:</strong> {{hotel}}<br/>
+        <strong>Country:</strong> {{country}}
       </div>
 
-      <p>Our team will review your request and get back to you as soon as possible.  
-      Please allow some time for us to process your inquiry.</p>
+      <p>Our team will review your request and get back to you as soon as possible.
+        Please allow some time for us to process your inquiry.</p>
 
-      <p>If this message was not sent by you, you can safely ignore this email.</p>
+      <p>If this request was not sent by you, you can safely ignore this email.</p>
     </div>
 
     <!-- FOOTER -->

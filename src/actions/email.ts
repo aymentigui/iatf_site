@@ -139,3 +139,31 @@ export async function sendConfirmationMessage(data: any): Promise<{ status: numb
         return { status: 500, message: `Erreur: ${(error as Error).message}` };
     }
 }
+
+
+export async function sendConfirmationBusRequest(data: any): Promise<{ status: number; message: string }> {
+    try {
+        const template = await getEmailTemplate('email-bus-request');
+
+        const html = replaceTemplateVariables(template, {
+            email: data.email,
+            name: data.name,
+            phone: data.phone,
+            urgence: data.urgence,
+            hotel:data.hotel,
+            country:data.country
+        });
+
+
+        await sendEmail(
+            data.email,
+            "Your message has been sent",
+            html,
+        )
+
+        return { status: 200, message: 'Email envoyé avec succès' };
+    } catch (error) {
+        console.error('Erreur lors de l\'envoi de l\'email de confermation bus request:', error);
+        return { status: 500, message: `Erreur: ${(error as Error).message}` };
+    }
+}
