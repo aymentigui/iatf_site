@@ -291,17 +291,20 @@ model hotels {
 }
 
 model contact {
-  id          String        @id @default(cuid())
-  name        String
-  email       String
-  phone       String?
-  subject     String
-  message     String
-  viewed      Boolean       @default(false)
-  created_at  DateTime      @default(now())
-  updated_at  DateTime      @updatedAt
-  is_read     Boolean       @default(false)
-  verified    Boolean       @default(true)
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  phone      String?
+  subject    String
+  message    String
+  viewed     Boolean  @default(false)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  is_read    Boolean  @default(false)
+  verified   Boolean  @default(true)
+  hotel      String?
+  country    String?
+
   Contact_otp Contact_otp[]
 }
 
@@ -312,9 +315,6 @@ model Contact_otp {
   used       Boolean  @default(false)
   created_at DateTime @default(now())
   email      String?
-  hotel      String?
-  country    String?
-
   // Relation avec ContactMessage
   contact_id String?
   contact    contact? @relation(fields: [contact_id], references: [id], onDelete: Cascade)

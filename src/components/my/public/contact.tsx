@@ -113,7 +113,6 @@ const Contact = () => {
                                     value={formData.subject}
                                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    required
                                 />
                             </div>
 
@@ -126,7 +125,6 @@ const Contact = () => {
                                     value={formData.phone}
                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    required
                                 />
                             </div>
 
@@ -171,7 +169,6 @@ const Contact = () => {
                                     value={formData.hotel}
                                     onChange={(e) => setFormData({ ...formData, hotel: e.target.value })}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    required
                                 />
                             </div>
 
