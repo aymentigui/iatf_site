@@ -13,8 +13,20 @@ import Image from 'next/image';
 import Loading from '@/components/myui/loading';
 import toast from 'react-hot-toast';
 
+const africanCountriesKeys = [
+    "algeria", "morocco", "tunisia", "libya", "egypt", "mauritania", "mali",
+    "niger", "chad", "sudan", "south_sudan", "eritrea", "djibouti", "somalia",
+    "ethiopia", "kenya", "uganda", "tanzania", "rwanda", "burundi", "drc",
+    "congo", "gabon", "equatorial_guinea", "cameroon", "nigeria", "benin", "togo",
+    "ghana", "burkina_faso", "ivory_coast", "liberia", "sierra_leone", "guinea", "guinea_bissau",
+    "senegal", "gambia", "cape_verde", "south_africa", "namibia", "botswana", "zimbabwe",
+    "zambia", "mozambique", "malawi", "lesotho", "eswatini", "madagascar", "comoros",
+    "seychelles", "mauritius", "western_sahara"
+]
+
+
 const Contact = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', phone: "", subject: "", message: '' });
+    const [formData, setFormData] = useState({ name: '', email: '', phone: "", subject: "", message: '', hotel: "", country: "" });
     const t = useTranslations();
     const [showDialog, setShowDialog] = useState(false)
     const [code, setCode] = useState("")
@@ -49,7 +61,7 @@ const Contact = () => {
                 } else {
                     toast("Verified ✅")
                 }
-                setFormData({ name: '', email: '', phone: "", subject: "", message: '' })
+                setFormData({ name: '', email: '', phone: "", subject: "", message: '', hotel: "", country: "" })
                 setShowDialog(false)
             } else {
                 toast(res.message)
@@ -126,6 +138,38 @@ const Contact = () => {
                                     type="email"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    required
+                                />
+                            </div>
+
+                            {/* Pays */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                    {t("busRequest.country")}
+                                </label>
+                                <select
+                                    value={formData.country}
+                                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                >
+                                    <option value="">{t("busRequest.country")}</option>
+                                    {africanCountriesKeys.map((key) => (
+                                        <option key={key} value={key}>
+                                            {t(`country.${key}`)}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                    {t('busRequest.hotel')}
+                                </label>
+                                <input
+                                    type="hotel"
+                                    value={formData.hotel}
+                                    onChange={(e) => setFormData({ ...formData, hotel: e.target.value })}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                     required
                                 />
@@ -229,7 +273,7 @@ const Contact = () => {
                             onClick={handleVerified}
                             className="bg-blue-600 text-white px-4 py-2 rounded mr-2"
                         >
-                             {t("busRequest.verifyButton")}
+                            {t("busRequest.verifyButton")}
                         </button>
                         <button
                             onClick={handleResent}

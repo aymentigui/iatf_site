@@ -16,6 +16,8 @@ export async function createContactMessage(data: any): Promise<{ status: number;
             email: z.string().email("Invalid email address"),
             phone: z.string().optional(),
             message: z.string().min(1, "Message is required"),
+            hotel: z.string().optional(),
+            country: z.string().optional(),
         });
 
         const result = shema.safeParse(data);
@@ -25,7 +27,7 @@ export async function createContactMessage(data: any): Promise<{ status: number;
             return { status: 400, data: { errors: result.error.errors } };
         }
 
-        const { name, subject, phone, email, message } = result.data
+        const { name, subject, phone, email, message, hotel, country } = result.data
 
         const otp_code= await prisma.contact_otp.findFirst({
             where: { email, used: true, expires_at: { gt: new Date() } }
@@ -40,7 +42,7 @@ export async function createContactMessage(data: any): Promise<{ status: number;
         const contact=await prisma.contact.create(
             {
                 data: {
-                    name, subject, phone, email, message
+                    name, subject, phone, email, message, hotel, country
                 }
             }
         )
@@ -152,7 +154,6 @@ export async function createBusRequest(data: any): Promise<{ status: number; dat
             country
         })
 
-        
         return { status: 200, data: contact }
     } catch (error) {
         console.error("An error occurred in createRestaurant:", error)
