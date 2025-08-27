@@ -31,6 +31,7 @@ const Contact = () => {
     const [showDialog, setShowDialog] = useState(false)
     const [code, setCode] = useState("")
     const [loading, setLoading] = useState(false) // 👈 état loading
+    const [loading2, setLoading2] = useState(false) // 👈 état loading
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -52,6 +53,7 @@ const Contact = () => {
     }
 
     const handleVerified = async () => {
+        setLoading2(true)
         if (formData.email && code) {
             const res = await verifyOtp(formData.email, code)
             if (res.status === 200) {
@@ -67,6 +69,7 @@ const Contact = () => {
                 toast(res.message)
             }
         }
+        setLoading2(false)
     }
 
     const handleResent = async () => {
@@ -270,7 +273,11 @@ const Contact = () => {
                             onClick={handleVerified}
                             className="bg-blue-600 text-white px-4 py-2 rounded mr-2"
                         >
-                            {t("busRequest.verifyButton")}
+                            {loading2
+                                ? <div className='w-full flex justify-center items-center'>
+                                    <Loading></Loading>
+                                </div>
+                                : t("busRequest.verifyButton")}
                         </button>
                         <button
                             onClick={handleResent}
