@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AlertCircle, Bus, Clock, MapPin, Navigation, Phone, Signal, Users } from "lucide-react"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 import L from "leaflet"
@@ -41,36 +41,6 @@ const Services = () => {
     },
   ]
 
-  const zones = [
-    {
-      id: "est",
-      name: t("station.zones.est.name"),
-      description: t("station.zones.est.description"),
-      color: "bg-orange-500",
-      quais: "1-32",
-    },
-    {
-      id: "ouest",
-      name: t("station.zones.ouest.name"),
-      description: t("station.zones.ouest.description"),
-      color: "bg-blue-500",
-      quais: "33-64",
-    },
-    {
-      id: "centrale",
-      name: t("station.zones.centrale.name"),
-      description: t("station.zones.centrale.description"),
-      color: "bg-cyan-500",
-      quais: "65-96",
-    },
-    {
-      id: "h",
-      name: t("station.zones.h.name"),
-      description: t("station.zones.h.description"),
-      color: "bg-indigo-500",
-      quais: "97-128",
-    },
-  ]
 
   const mapZones = [
     {
@@ -134,7 +104,7 @@ const Services = () => {
       quais: "1-24",
       hotels: 20,
       buses: 120,
-      coordinates: [36.7763, 3.0585] // Coordinates for Sidi M'Hamed & Bab El Oued
+      coordinates: [36.77874161069837, 3.0583660037375435] // Coordinates for Sidi M'Hamed & Bab El Oued 36.77874161069837, 3.0583660037375435
     },
     {
       id: "zone2",
@@ -144,7 +114,7 @@ const Services = () => {
       quais: "25-64",
       hotels: 37,
       buses: 222,
-      coordinates: [36.7128, 3.1755] // Coordinates for Dar El Beïda, Bab Ezzouar, Baraki
+      coordinates: [36.704441344586066, 3.14956776249121] // Coordinates for Dar El Beïda, Bab Ezzouar, Baraki  , 
     },
     {
       id: "zone3",
@@ -154,7 +124,7 @@ const Services = () => {
       quais: "69-84",
       hotels: 13,
       buses: 78,
-      coordinates: [36.7375, 3.1333] // Coordinates for Hussein Dey, El Harrach, El Mohammadia, Rouiba
+      coordinates: [36.730218132932684, 3.1624536243578896] // Coordinates for Hussein Dey, El Harrach, El Mohammadia, Rouiba   36.730218132932684, 3.1624536243578896
     },
     {
       id: "zone4",
@@ -164,7 +134,7 @@ const Services = () => {
       quais: "85-112",
       hotels: 27,
       buses: 162,
-      coordinates: [36.7642, 2.9594] // Coordinates for Chéraga, Draria, Bouzaréah
+      coordinates: [36.7721949576943, 2.9886829697545942] // Coordinates for Chéraga, Draria, Bouzaréah      36.7721949576943, 2.9886829697545942
     },
     {
       id: "zone5",
@@ -174,7 +144,7 @@ const Services = () => {
       quais: "113-139",
       hotels: 47,
       buses: 246,
-      coordinates: [36.5966, 2.8104] // Coordinates for Bir Mourad Rais, Zéralda, Tessala El Merdja, Douira, Blida, Tipaza, Boumerdès
+      coordinates: [36.690022446619516, 2.91987659616051] // Coordinates for Bir Mourad Rais, Zéralda, Tessala El Merdja, Douira, Blida, Tipaza, Boumerdès   36.690022446619516, 2.91987659616051
     },
     {
       id: "zone6",
@@ -199,6 +169,13 @@ const Services = () => {
   ]
 
   const [activeZone, setActiveZone] = useState<any>(null)
+  const [mounted, setMounted] = useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
 
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white lg:p-40">
@@ -373,7 +350,7 @@ const Services = () => {
                   {/* Cercle coloré pour chaque zone */}
                   <Circle
                     center={zone.coordinates}
-                    radius={1500} // rayon en mètres
+                    radius={2500} // rayon en mètres
                     pathOptions={{ color: zone.color, fillOpacity: 0.2 }}
                   />
                 </React.Fragment>
