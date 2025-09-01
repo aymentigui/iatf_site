@@ -499,10 +499,6 @@ class App {
                 "text": "Kenya - East Africa's economic hub"
             },
             {
-                "image": "https://flagcdn.com/w320/eh.png",
-                "text": "Western Sahara"
-            },
-            {
                 "image": "https://flagcdn.com/w320/gh.png",
                 "text": "Ghana - Gateway to West Africa"
             },
@@ -525,6 +521,10 @@ class App {
             {
                 "image": "https://flagcdn.com/w320/tz.png",
                 "text": "Tanzania"
+            },
+            {
+                "image": "https://flagcdn.com/w320/eh.png",
+                "text": "Western Sahara"
             },
             {
                 "image": "https://flagcdn.com/w320/rw.png",
