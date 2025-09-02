@@ -20,7 +20,8 @@ const NewHeader = () => {
         <motion.header
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-6"
+            className="text-white py-6"
+            style={{ background: 'linear-gradient(to right, #8a0a2c, #DE1B50, #8a0a2c)' }}
         >
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-6">
@@ -45,16 +46,13 @@ const NewHeader = () => {
 
                     {/* Menu desktop */}
                     <nav className="hidden md:flex items-center space-x-6 mr-4">
-                        <a href="/" className="hover:text-blue-300 mx-2 transition-colors">
+                        <a href="/" className="hover:opacity-80 mx-2 transition-opacity">
                             {t('Header.home')}
                         </a>
-                        {/* <a href="/hotels" className="hover:text-blue-300 mx-2 transition-colors">
-                            {t('header.hotels')}
-                        </a> */}
-                        <a href="/contact" className="hover:text-blue-300 mx-2 transition-colors">
+                        <a href="/contact" className="hover:opacity-80 mx-2 transition-opacity">
                             {t('contact.title')}
                         </a>
-                        <a href="/busrequest" className="hover:text-blue-300 mx-2 transition-colors">
+                        <a href="/busrequest" className="hover:opacity-80 mx-2 transition-opacity">
                             {t('busRequest.title')}
                         </a>
                     </nav>
@@ -63,7 +61,7 @@ const NewHeader = () => {
                         <LanguageSwitcher locale={locale} />
                         {/* Bouton menu mobile */}
                         <button
-                            className="md:hidden p-2 rounded-md hover:bg-blue-700 transition-colors"
+                            className="md:hidden p-2 rounded-md hover:bg-[#8a0a2c] transition-colors"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             aria-label="Ouvrir le menu"
                         >
@@ -96,14 +94,15 @@ const NewHeader = () => {
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
                         transition={{ type: 'tween', ease: 'easeInOut' }}
-                        className="fixed inset-y-0 right-0 w-64 bg-blue-900 z-50 md:hidden shadow-2xl"
+                        className="fixed inset-y-0 right-0 w-64 z-50 md:hidden shadow-2xl"
+                        style={{ backgroundColor: '#DE1B50' }}
                     >
                         <div className="p-5 flex flex-col h-full">
                             <div className="flex justify-between items-center mb-10">
                                 <h2 className="text-xl font-bold">Menu</h2>
                                 <button
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="p-2 rounded-full hover:bg-blue-700"
+                                    className="p-2 rounded-full hover:bg-[#8a0a2c]"
                                     aria-label="Fermer le menu"
                                 >
                                     <X className="w-6 h-6" />
@@ -113,35 +112,28 @@ const NewHeader = () => {
                             <nav className="flex flex-col space-y-6">
                                 <a
                                     href="/"
-                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+                                    className="py-3 px-4 rounded-lg hover:bg-[#8a0a2c] transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('Header.home')}
                                 </a>
-                                {/* <a
-                                    href="/hotels"
-                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    {t('header.hotels')}
-                                </a> */}
                                 <a
                                     href="/contact"
-                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+                                    className="py-3 px-4 rounded-lg hover:bg-[#8a0a2c] transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('contact.title')}
                                 </a>
                                 <a
                                     href="/busrequest"
-                                    className="py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-lg"
+                                    className="py-3 px-4 rounded-lg hover:bg-[#8a0a2c] transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {t('busRequest.title')}
                                 </a>
                             </nav>
 
-                            <div className="mt-auto pt-6 border-t border-blue-700">
+                            <div className="mt-auto pt-6 border-t border-[#8a0a2c]">
                                 <LanguageSwitcher locale={locale} />
                             </div>
                         </div>

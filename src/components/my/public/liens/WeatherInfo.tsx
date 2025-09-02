@@ -52,7 +52,7 @@ export function WeatherInfo() {
 
   return (
     <section>
-      <div className="bg-blue-800 text-white p-6 rounded-lg">
+      <div className="bg-[#DE1B50] text-white p-6 rounded-lg">
         <h2 className="text-2xl font-bold text-center mb-6">{t("title")}</h2>
         <div className="grid md:grid-cols-4 gap-4">
           {weather.map((w, i) => (
