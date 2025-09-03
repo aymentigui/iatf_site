@@ -314,10 +314,24 @@ model Contact_otp {
   expires_at DateTime
   used       Boolean  @default(false)
   created_at DateTime @default(now())
-  email      String?
+  attempts   Int      @default(0) // Nombre de tentatives d'utilisation
+  email String?
   // Relation avec ContactMessage
+
+  generation_count Int @default(1) // Nombre de fois que ce code a été régénéré
+
   contact_id String?
   contact    contact? @relation(fields: [contact_id], references: [id], onDelete: Cascade)
+}
+
+model OtpGenerationLimit {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  count         Int       @default(1)
+  last_reset    DateTime  @default(now())
+  blocked_until DateTime?
+
+  @@index([email])
 }
 
 model bus_request {
