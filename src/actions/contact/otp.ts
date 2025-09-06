@@ -9,7 +9,7 @@ function generateCode(length: number = 6) {
 }
 
 async function isUserBlocked(email: string): Promise<boolean> {
-    const limitRecord = await prisma.otpGenerationLimit.findUnique({
+    const limitRecord = await prisma.otp_generation_limit.findUnique({
         where: { email }
     });
 
@@ -20,7 +20,7 @@ async function isUserBlocked(email: string): Promise<boolean> {
 // Réinitialiser les limitations si nécessaire
 // Réinitialiser les limitations si nécessaire
 async function resetLimitationsIfNeeded(email: string) {
-    const limitRecord = await prisma.otpGenerationLimit.findUnique({
+    const limitRecord = await prisma.otp_generation_limit.findUnique({
         where: { email }
     });
 
@@ -31,7 +31,7 @@ async function resetLimitationsIfNeeded(email: string) {
         
         // Réinitialiser après 24 heures OU si le blocage est expiré
         if (hoursDiff >= 24 || (limitRecord.blocked_until && limitRecord.blocked_until <= now)) {
-            await prisma.otpGenerationLimit.update({
+            await prisma.otp_generation_limit.update({
                 where: { email },
                 data: { 
                     count: 0,
@@ -47,7 +47,7 @@ export async function createOtp(email: string) {
     try {
         // Vérifier si l'utilisateur est bloqué
         if (await isUserBlocked(email)) {
-            const limitRecord = await prisma.otpGenerationLimit.findUnique({
+            const limitRecord = await prisma.otp_generation_limit.findUnique({
                 where: { email }
             });
             
@@ -69,7 +69,7 @@ export async function createOtp(email: string) {
         await resetLimitationsIfNeeded(email);
 
         // Vérifier le nombre de générations
-        const limitRecord = await prisma.otpGenerationLimit.findUnique({
+        const limitRecord = await prisma.otp_generation_limit.findUnique({
             where: { email }
         });
 
@@ -77,7 +77,7 @@ export async function createOtp(email: string) {
             // Bloquer pour 15 minutes au lieu de 1 heure
             const blockedUntil = new Date(Date.now() + 15 * 60 * 1000);
             
-            await prisma.otpGenerationLimit.update({
+            await prisma.otp_generation_limit.update({
                 where: { email },
                 data: { 
                     blocked_until: blockedUntil,
@@ -116,7 +116,7 @@ export async function createOtp(email: string) {
             otpData.generation_count = existingOtp.generation_count + 1;
             
             // Bloquer si déjà 3 générations (ce cas ne devrait normalement pas se produire
-            // car c'est géré par OtpGenerationLimit, mais on garde cette sécurité)
+            // car c'est géré par otp_generation_limit, mais on garde cette sécurité)
             if (existingOtp.generation_count >= 3) {
                 return { 
                     status: 429, 
@@ -133,7 +133,7 @@ export async function createOtp(email: string) {
 
         // Mettre à jour le compteur de générations
         if (limitRecord) {
-            await prisma.otpGenerationLimit.update({
+            await prisma.otp_generation_limit.update({
                 where: { email },
                 data: { 
                     count: limitRecord.count + 1,
@@ -141,7 +141,7 @@ export async function createOtp(email: string) {
                 }
             });
         } else {
-            await prisma.otpGenerationLimit.create({
+            await prisma.otp_generation_limit.create({
                 data: {
                     email,
                     count: 1
@@ -224,7 +224,7 @@ export async function resendOtp(email: string) {
     try {
         // Vérifier si l'utilisateur est bloqué
         if (await isUserBlocked(email)) {
-            const limitRecord = await prisma.otpGenerationLimit.findUnique({
+            const limitRecord = await prisma.otp_generation_limit.findUnique({
                 where: { email }
             });
             
@@ -246,7 +246,7 @@ export async function resendOtp(email: string) {
         await resetLimitationsIfNeeded(email);
 
         // Vérifier le nombre de générations
-        const limitRecord = await prisma.otpGenerationLimit.findUnique({
+        const limitRecord = await prisma.otp_generation_limit.findUnique({
             where: { email }
         });
 
@@ -254,7 +254,7 @@ export async function resendOtp(email: string) {
             // Bloquer pour 15 minutes
             const blockedUntil = new Date(Date.now() + 15 * 60 * 1000);
             
-            await prisma.otpGenerationLimit.update({
+            await prisma.otp_generation_limit.update({
                 where: { email },
                 data: { 
                     blocked_until: blockedUntil
@@ -301,7 +301,7 @@ export async function resendOtp(email: string) {
 
         // Mettre à jour le compteur de générations
         if (limitRecord) {
-            await prisma.otpGenerationLimit.update({
+            await prisma.otp_generation_limit.update({
                 where: { email },
                 data: { 
                     count: limitRecord.count + 1,
@@ -309,7 +309,7 @@ export async function resendOtp(email: string) {
                 }
             });
         } else {
-            await prisma.otpGenerationLimit.create({
+            await prisma.otp_generation_limit.create({
                 data: {
                     email,
                     count: 1
@@ -344,7 +344,7 @@ export async function cleanupOtpLimitations() {
         const now = new Date();
         
         // Supprimer les limitations expirées (plus de 24h ou blocage expiré)
-        await prisma.otpGenerationLimit.deleteMany({
+        await prisma.otp_generation_limit.deleteMany({
             where: {
                 OR: [
                     { last_reset: { lt: yesterday } },

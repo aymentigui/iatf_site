@@ -502,10 +502,10 @@ class App {
                 "image": "https://flagcdn.com/w320/gh.png",
                 "text": "Ghana - Gateway to West Africa"
             },
-            {
-                "image": "https://flagcdn.com/w320/ma.png",
-                "text": "Morocco"
-            },
+            // {
+            //     "image": "https://flagcdn.com/w320/ma.png",
+            //     "text": "Morocco"
+            // },
             {
                 "image": "https://flagcdn.com/w320/et.png",
                 "text": "Ethiopia"

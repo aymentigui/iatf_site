@@ -319,7 +319,7 @@
         "invalidhtml5": "Ce champ doit être un HTML5"
     },
     "header": {
-        "title": "IATF2025 ALGER COMMENCE DANS",
+        "title": "IATF2025 ALGER TERMINE DANS",
         "days": "jours",
         "hours": "heures",
         "minutes": "minutes",
@@ -934,5 +934,79 @@
         "seychelles": "Seychelles",
         "mauritius": "Maurice",
         "western_sahara": "الصحراء الغربية"
+    },
+    "busRequest": {
+        "title": "Demande de Bus",
+        "description": "Remplissez ce formulaire pour réserver votre transport",
+        "form": {
+            "name": {
+                "label": "Nom (optionnel)",
+                "placeholder": "Votre nom complet",
+                "error": "Le nom doit contenir au moins 2 caractères"
+            },
+            "hotel": {
+                "label": "Hôtel (optionnel)",
+                "placeholder": "Nom de l'hôtel",
+                "error": "L'hôtel doit contenir au moins 2 caractères"
+            },
+            "date": {
+                "label": "Date du vol *",
+                "error": "La date est requise"
+            },
+            "time": {
+                "label": "Heure du vol *",
+                "error": "L'heure est requise"
+            },
+            "submit": "Soumettre la demande",
+            "submitting": "Envoi en cours..."
+        },
+        "success": {
+            "title": "Succès",
+            "message": "Votre demande a été enregistrée avec succès !"
+        },
+        "toast": {
+            "success": "Votre demande de bus a été enregistrée avec succès.",
+            "error": "Une erreur est survenue lors de l'envoi.",
+            "networkError": "Impossible de soumettre votre demande. Veuillez réessayer."
+        }
+    },
+    "busRequest2": {
+        "page": {
+            "title": "Service de Transport",
+            "description": "Réservez facilement votre transport en bus. Remplissez le formulaire ci-dessous et nous nous occuperons du reste."
+        },
+        "title": "Demande de Bus",
+        "description": "Remplissez ce formulaire pour réserver votre transport",
+        "form": {
+            "name": {
+                "label": "Nom (optionnel)",
+                "placeholder": "Votre nom complet",
+                "error": "Le nom doit contenir au moins 2 caractères"
+            },
+            "hotel": {
+                "label": "Hôtel (optionnel)",
+                "placeholder": "Nom de l'hôtel",
+                "error": "L'hôtel doit contenir au moins 2 caractères"
+            },
+            "date": {
+                "label": "Date du vol *",
+                "error": "La date est requise"
+            },
+            "time": {
+                "label": "Heure du vol *",
+                "error": "L'heure est requise"
+            },
+            "submit": "Soumettre la demande",
+            "submitting": "Envoi en cours..."
+        },
+        "success": {
+            "title": "Succès",
+            "message": "Votre demande a été enregistrée avec succès !"
+        },
+        "toast": {
+            "success": "Votre demande de bus a été enregistrée avec succès.",
+            "error": "Une erreur est survenue lors de l'envoi.",
+            "networkError": "Impossible de soumettre votre demande. Veuillez réessayer."
+        }
     }
 }

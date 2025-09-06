@@ -10,7 +10,7 @@ const handle = app.getRequestHandler();
 
 // 🔹 Générer Prisma Client avant de démarrer l'application
 try {
-  execSync("npx prisma generate", { stdio: "inherit" });
+  execSync("npx prisma db push", { stdio: "inherit" });
   console.log("✅ Prisma client generated successfully.");
 } catch (error) {
   console.error("❌ Failed to generate Prisma client:", error);

@@ -14,7 +14,7 @@ const NewHeader = () => {
     const params = useParams();
     const locale = params.locale as string;
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const targetDate = new Date('2025-09-04T00:00:00Z');
+    const targetDate = new Date('2025-09-10T00:00:00Z');
 
     return (
         <motion.header
@@ -52,7 +52,7 @@ const NewHeader = () => {
                         <a href="/contact" className="hover:opacity-80 mx-2 transition-opacity">
                             {t('contact.title')}
                         </a>
-                        <a href="/busrequest" className="hover:opacity-80 mx-2 transition-opacity">
+                        <a href="/busrequest2" className="hover:opacity-80 mx-2 transition-opacity">
                             {t('busRequest.title')}
                         </a>
                     </nav>
@@ -125,7 +125,7 @@ const NewHeader = () => {
                                     {t('contact.title')}
                                 </a>
                                 <a
-                                    href="/busrequest"
+                                    href="/busrequest2"
                                     className="py-3 px-4 rounded-lg hover:bg-[#8a0a2c] transition-colors text-lg"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >

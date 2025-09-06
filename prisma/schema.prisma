@@ -315,7 +315,7 @@ model Contact_otp {
   used       Boolean  @default(false)
   created_at DateTime @default(now())
   attempts   Int      @default(0) // Nombre de tentatives d'utilisation
-  email String?
+  email      String?
   // Relation avec ContactMessage
 
   generation_count Int @default(1) // Nombre de fois que ce code a été régénéré
@@ -324,7 +324,7 @@ model Contact_otp {
   contact    contact? @relation(fields: [contact_id], references: [id], onDelete: Cascade)
 }
 
-model OtpGenerationLimit {
+model otp_generation_limit {
   id            String    @id @default(cuid())
   email         String    @unique
   count         Int       @default(1)
@@ -345,4 +345,14 @@ model bus_request {
   viewed     Boolean  @default(false)
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
+}
+
+model bus_request2 {
+  id         String    @id @default(cuid())
+  name       String?
+  hotel      String?
+  date       DateTime?
+  time       DateTime?
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
 }

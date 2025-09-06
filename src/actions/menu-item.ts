@@ -51,7 +51,7 @@ const itemsMenu = async () =>{
         },
         {
             title: "Bus Request",
-            url: "/admin/bus_request",
+            url: "/admin/bus_request2",
             icon: UserRoundCog,
             admin: false,
             permissions: [""],

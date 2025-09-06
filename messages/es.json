@@ -319,7 +319,7 @@
         "invalidhtml5": "Este campo debe ser un HTML5"
     },
     "header": {
-        "title": "IATF2025 ARGEL COMIENZA EN",
+        "title": "IATF2025 ARGEL TERMINA EN",
         "days": "días",
         "hours": "horas",
         "minutes": "minutos",
@@ -934,5 +934,44 @@
         "seychelles": "Seychelles",
         "mauritius": "Mauricio",
         "western_sahara": "Sáhara Occidental"
+    },
+    "busRequest2": {
+        "page": {
+            "title": "Servicio de Transporte",
+            "description": "Reserve fácilmente su transporte en autobús. Complete el formulario a continuación y nosotros nos encargaremos del resto."
+        },
+        "title": "Solicitud de Autobús",
+        "description": "Complete este formulario para reservar su transporte",
+        "form": {
+            "name": {
+                "label": "Nombre (opcional)",
+                "placeholder": "Su nombre completo",
+                "error": "El nombre debe contener al menos 2 caracteres"
+            },
+            "hotel": {
+                "label": "Hotel (opcional)",
+                "placeholder": "Nombre del hotel",
+                "error": "El hotel debe contener al menos 2 caracteres"
+            },
+            "date": {
+                "label": "Fecha del Vuelo *",
+                "error": "La fecha es requerida"
+            },
+            "time": {
+                "label": "Hora del Vuelo *",
+                "error": "La hora es requerida"
+            },
+            "submit": "Enviar Solicitud",
+            "submitting": "Enviando..."
+        },
+        "success": {
+            "title": "Éxito",
+            "message": "¡Su solicitud ha sido registrada con éxito!"
+        },
+        "toast": {
+            "success": "Su solicitud de autobús ha sido registrada con éxito.",
+            "error": "Ocurrió un error durante el envío.",
+            "networkError": "No se pudo enviar su solicitud. Por favor, intente nuevamente."
+        }
     }
 }

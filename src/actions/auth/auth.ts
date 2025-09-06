@@ -165,11 +165,10 @@ export async function loginUser(data: any): Promise<{ status: number, data: any,
         }
     } catch (error) {
         if (error instanceof Error) {
-            console.error(error.message);
-            return { status: 500, data: { message: 'An error occurred' } };
+            return { status: 500, data: { message: 'An error occurred'+error } };
         }
-        console.error("An error occurred");
-        return { status: 500, data: { message: 'An error occurred' } };
+        console.error("An error occurred"+error);
+        return { status: 500, data: { message: 'An error occurred'+error } };
     }
 }
 

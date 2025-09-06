@@ -16,7 +16,7 @@ export async function getContactMessages(): Promise<{ status: number; data: any 
     const [messages, total] = await Promise.all([
       prisma.contact.findMany({
       }),
-      prisma.restaurant.count(),
+      prisma.contact.count(),
     ])
 
     return {
@@ -45,7 +45,7 @@ export async function getBusRequest(): Promise<{ status: number; data: any }> {
     const [messages, total] = await Promise.all([
       prisma.bus_request.findMany({
       }),
-      prisma.restaurant.count(),
+      prisma.bus_request.count(),
     ])
 
     return {

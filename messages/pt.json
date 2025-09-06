@@ -319,14 +319,14 @@
         "invalidhtml5": "Este campo deve ser um HTML5"
     },
     "header": {
-        "title": "IATF2025 ALGIERS STARTS IN",
-        "days": "days",
-        "hours": "hours",
-        "minutes": "minutes",
-        "seconds": "seconds",
-        "hotels": "Hotels",
-        "restaurants": "Restaurants",
-        "links": "Useful Links"
+        "title": "IATF2025 ARGEL TERMINA EM",
+        "days": "dias",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "segundos",
+        "hotels": "Hotéis",
+        "restaurants": "Restaurantes",
+        "links": "Links Úteis"
     },
     "hero": {
         "title": "IATF2025 ALGIERS",
@@ -934,5 +934,44 @@
         "seychelles": "Seicheles",
         "mauritius": "Maurício",
         "western_sahara": "Saara Ocidental"
+    },
+    "busRequest2": {
+        "page": {
+            "title": "Serviço de Transporte",
+            "description": "Reserve facilmente o seu transporte de ônibus. Preencha o formulário abaixo e cuidaremos do resto."
+        },
+        "title": "Solicitação de Ônibus",
+        "description": "Preencha este formulário para reservar seu transporte",
+        "form": {
+            "name": {
+                "label": "Nome (opcional)",
+                "placeholder": "Seu nome completo",
+                "error": "O nome deve conter pelo menos 2 caracteres"
+            },
+            "hotel": {
+                "label": "Hotel (opcional)",
+                "placeholder": "Nome do hotel",
+                "error": "O hotel deve conter pelo menos 2 caracteres"
+            },
+            "date": {
+                "label": "Data do Voo *",
+                "error": "A data é obrigatória"
+            },
+            "time": {
+                "label": "Hora do Voo *",
+                "error": "A hora é obrigatória"
+            },
+            "submit": "Enviar Solicitação",
+            "submitting": "Enviando..."
+        },
+        "success": {
+            "title": "Sucesso",
+            "message": "Sua solicitação foi registrada com sucesso!"
+        },
+        "toast": {
+            "success": "Sua solicitação de ônibus foi registrada com sucesso.",
+            "error": "Ocorreu um erro durante o envio.",
+            "networkError": "Não foi possível enviar sua solicitação. Por favor, tente novamente."
+        }
     }
 }
