@@ -939,6 +939,10 @@
         "western_sahara": "Western Sahara"
     },
     "busRequest2": {
+        "page": {
+            "title": "Transport Service",
+            "description": "Easily book your bus transportation. Fill out the form below and we'll take care of the rest."
+        },
         "title": "Bus Request",
         "description": "Fill out this form to book your transportation",
         "form": {
@@ -972,44 +976,5 @@
             "error": "An error occurred while sending.",
             "networkError": "Unable to submit your request. Please try again."
         }
-    },
-    "busRequest2": {
-    "page": {
-      "title": "Transport Service",
-      "description": "Easily book your bus transportation. Fill out the form below and we'll take care of the rest."
-    },
-    "title": "Bus Request",
-    "description": "Fill out this form to book your transportation",
-    "form": {
-      "name": {
-        "label": "Name (optional)",
-        "placeholder": "Your full name",
-        "error": "Name must contain at least 2 characters"
-      },
-      "hotel": {
-        "label": "Hotel (optional)",
-        "placeholder": "Hotel name",
-        "error": "Hotel must contain at least 2 characters"
-      },
-      "date": {
-        "label": "Flight Date *",
-        "error": "Date is required"
-      },
-      "time": {
-        "label": "Flight Time *",
-        "error": "Time is required"
-      },
-      "submit": "Submit Request",
-      "submitting": "Submitting..."
-    },
-    "success": {
-      "title": "Success",
-      "message": "Your request has been successfully recorded!"
-    },
-    "toast": {
-      "success": "Your bus request has been successfully recorded.",
-      "error": "An error occurred while sending.",
-      "networkError": "Unable to submit your request. Please try again."
     }
-  }
 }
