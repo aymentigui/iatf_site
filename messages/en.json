@@ -952,7 +952,7 @@
                 "error": "Name must contain at least 2 characters"
             },
             "hotel": {
-                "label": "Hotel (optional)",
+                "label": "Hotel",
                 "placeholder": "Hotel name",
                 "error": "Hotel must contain at least 2 characters"
             },

@@ -23,7 +23,7 @@ export function BusRequestForm() {
 
     const busRequestSchema = z.object({
         name: z.string().min(2, t('form.name.error')).optional().or(z.literal("")),
-        hotel: z.string().min(2, t('form.hotel.error')).optional().or(z.literal("")),
+        hotel: z.string().min(5, t('form.hotel.error')),
         date: z.string().min(1, t('form.date.error')),
         time: z.string().min(1, t('form.time.error')),
     })

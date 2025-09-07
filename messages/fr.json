@@ -935,41 +935,6 @@
         "mauritius": "Maurice",
         "western_sahara": "الصحراء الغربية"
     },
-    "busRequest": {
-        "title": "Demande de Bus",
-        "description": "Remplissez ce formulaire pour réserver votre transport",
-        "form": {
-            "name": {
-                "label": "Nom (optionnel)",
-                "placeholder": "Votre nom complet",
-                "error": "Le nom doit contenir au moins 2 caractères"
-            },
-            "hotel": {
-                "label": "Hôtel (optionnel)",
-                "placeholder": "Nom de l'hôtel",
-                "error": "L'hôtel doit contenir au moins 2 caractères"
-            },
-            "date": {
-                "label": "Date du vol *",
-                "error": "La date est requise"
-            },
-            "time": {
-                "label": "Heure du vol *",
-                "error": "L'heure est requise"
-            },
-            "submit": "Soumettre la demande",
-            "submitting": "Envoi en cours..."
-        },
-        "success": {
-            "title": "Succès",
-            "message": "Votre demande a été enregistrée avec succès !"
-        },
-        "toast": {
-            "success": "Votre demande de bus a été enregistrée avec succès.",
-            "error": "Une erreur est survenue lors de l'envoi.",
-            "networkError": "Impossible de soumettre votre demande. Veuillez réessayer."
-        }
-    },
     "busRequest2": {
         "page": {
             "title": "Service de Transport",
@@ -984,7 +949,7 @@
                 "error": "Le nom doit contenir au moins 2 caractères"
             },
             "hotel": {
-                "label": "Hôtel (optionnel)",
+                "label": "Hôtel *",
                 "placeholder": "Nom de l'hôtel",
                 "error": "L'hôtel doit contenir au moins 2 caractères"
             },

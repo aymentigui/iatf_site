@@ -949,7 +949,7 @@
                 "error": "O nome deve conter pelo menos 2 caracteres"
             },
             "hotel": {
-                "label": "Hotel (opcional)",
+                "label": "Hotel *",
                 "placeholder": "Nome do hotel",
                 "error": "O hotel deve conter pelo menos 2 caracteres"
             },
